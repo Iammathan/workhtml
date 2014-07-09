@@ -1,0 +1,944 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link href="favicon.ico" rel="SHORTCUT ICON"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'/>
+        <style>
+            html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, canvas, embed, output, ruby, summary, time, mark, audio, video {
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+                outline: 0;
+                margin: 0;
+                padding: 0
+            }
+            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+                display: block
+            }
+            body {
+                color: #666;
+                font-family: 'open sans', san-serif, arial;
+                font-size: 14px;
+                line-height: 20px;
+                margin: 0;
+                padding: 0
+            }
+            p
+            {
+                font-size:15px;
+                line-height:22px;
+                color:#666;
+            }
+            a
+            {
+                text-decoration:none;
+            }
+            ul, li
+            {
+                list-style-type:none;
+            }
+            /* smooth page down */
+            #sidebar {
+                width:97%;
+                position:fixed;
+                background:#fff;
+                height:30px;
+                top:0;
+                /* box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);*/
+                padding: 14px 20px 26px;
+                z-index:1;
+            }
+            .sha
+            {
+                box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);
+                -moz-box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);
+                -webkit-box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);
+            }
+            nav {
+                float:right;
+                width:391px;
+                /*overflow: auto;
+                position: absolute;
+                
+                margin:0 auto;
+                margin-left:110px;*/
+            }
+            /*nav.stick {
+               
+                left: 0;
+                margin-left: 0;
+                position: fixed;
+                top: 0;
+                z-index: 10000;
+            }*/
+            .stick ul
+            {
+                margin: 0 auto;
+                width: 766px;
+            }
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            nav li {
+                float: left;
+                margin:0 10px;
+            }
+            nav li a {
+                color: rgb(50,50,50);
+                font-size: 14px;
+                text-transform: uppercase;
+                padding:14px 10px 12px;
+                float:left;
+                /*background:#fff; */
+                /*                border:solid 1px #ddd;
+                                border-right:none;
+                                background:#f8f8f8;*/
+            }
+
+            nav.stick a.nav-active-sc {
+                /*border-bottom:solid 1px #ddd;
+                padding-bottom:12px;
+                background:#f9f9f9;*/
+                border-bottom:none;
+            }
+            a.nav-active-sc {
+                border-bottom: solid 3px #e45010;
+                padding-bottom:10px;
+                background:#fff;
+            }
+            nav.stick a.nav-active {
+                border-bottom: solid 3px #e45010;
+                padding-bottom:19px;
+                background:#fff;
+            }
+            a.nav-active {
+                border-bottom: solid 3px #e45010;
+                padding-bottom:8px;
+                background:#fff;
+            }
+            .main-div {
+                margin: 0 auto;
+                width: 980px;
+            }
+            section {
+                overflow: auto;
+            }
+
+            .wr-hol
+            {
+                width:1200px;
+                margin:0 auto;
+            }
+
+            h1
+            {
+                font-size:46px;
+                text-transform:uppercase;
+                color:#fff;
+                font-weight:600;
+                text-align:center;
+                margin-top:90px;
+                line-height:56px;
+            }
+            h1 span
+            {
+                font-weight:300;
+            }
+            .header-part li
+            {
+                width:38%;
+                float:left;
+            }
+            .header-part li.c-img
+            {
+                width:60%;
+            }
+            .header-part p
+            {
+                font-size:18px;
+                line-height:22px;
+                color:#fff;
+                font-weight:300;
+                margin-top:20px;
+                text-align:center;
+            }
+            .more
+            {
+                border:solid 1px #fff;
+                padding:10px 25px;
+                text-decoration:none;
+                color:#fff;
+                text-transform:uppercase;
+            }
+            .more:hover
+            {
+                background:#47c4ca;
+                color:#fff;
+                border:solid 1px #fff;
+            }
+            /* end smooth page down */
+
+            #content
+            {
+                margin:0 auto;
+                text-align:center;
+                margin-top:68px;
+            }
+            #home
+            {
+
+                background: #19b6bd;
+                padding:50px 0;
+            }
+            #services
+            {
+
+                background:#fff;
+            }
+            #our-work
+            {
+
+                background:#bbe9eb;
+            }
+            #customers
+            {
+                background:#f3f3f3;
+            }
+            #contact
+            {
+
+                background:#fff;
+            }
+
+
+            /* services */
+            .feat
+            {
+                clear:both;
+                padding:100px 0;
+            }
+            h2
+            {
+
+                font-size:38px;
+                line-height:48px;
+                margin-bottom:30px;
+                text-align:left;
+                font-weight:600;
+                color:#585858;
+                text-transform:uppercase;
+                text-align:center;
+
+            }
+            h2 span
+            {
+                font-weight:300;
+            }
+            .desc
+            {
+                font-size:18px;
+                line-height:24px;
+                color:#333;
+                font-weight:300;
+                text-align:center;
+                width:750px;
+                margin:10px auto;
+                margin-bottom:70px;
+            }
+            .icon-det li
+            {
+                width:544px;
+                float:left;
+                padding-top:15px;
+            }
+            .fet-line 
+            {
+                clear:both;
+            }
+            .fet-line li
+            {
+                width:538px;
+                float:left;
+                border-bottom:solid 1px #ecebeb;
+                margin:80px 0;
+
+            }
+            .circle
+            {
+                border-radius:90px;
+
+                /*border:solid 1px #eb633d;*/
+                float:left;
+                width:100px;
+                height:100px;
+                float:left;
+                margin-right:30px;
+            }
+            .feat
+            {
+                width:1200px;
+                margin:0 auto;
+                padding-bottom:100px;
+                overflow:auto;
+            }
+            h3
+            {
+                font-size:18px;
+                color:#333;
+                font-weight:400;
+                margin-bottom:10px;
+                text-align:left;
+            }
+            .icon-det p
+            {
+                text-align:left;
+            }
+            /* end services*/
+            /* our work*/
+            .s-work
+            {
+                padding:80px 50px;
+
+                overflow:auto;
+                clear:both;
+            }
+            .s-work li
+            {
+                float:left;
+                width:49%;
+            }
+            h4
+            {
+                font-size: 18px;
+                margin-top: 30px;
+                text-align: left;
+                text-transform: uppercase;
+
+            }
+            .s-work p
+            {
+
+                margin-top:10px;
+                text-align:left;
+                font-size:15px;
+            }
+            .w-point
+            {
+                clear:both;
+                margin-top:50px;
+            }
+            /* end our work*/
+
+            /* client start*/
+            .cli
+            {
+                background:#f3f3f3;
+                padding:100px 0;
+                overflow:auto;
+            }
+            .cli-det 
+            {
+                clear:both;
+            }
+            .cli-det li
+            {
+                width:300px;
+                float:left;
+                padding-top:15px;
+            }
+            .cli-line li
+            {
+                width:294px;
+                float:left;
+                border-bottom:solid 1px #8c8c8c;
+                margin:80px 0;
+
+            }
+            .cli-lo
+            {
+                width:1200px;
+                margin:0 auto;
+            }
+            .cli-circle
+            {
+                border-radius:90px;
+                background:#8b8989;
+                width:100px;
+                height:100px;
+                margin-right:30px;
+                margin:0 auto;
+            }
+            /* end client */
+            /* contact us section */
+            /* end contact us section */
+            .con
+            {
+                background:#fff;
+                padding:80px 0;
+                overflow:auto;
+            }
+            .share
+            {
+                background:#f7f7f7;
+                padding:120px 0;
+                overflow:auto;
+                clear:both;
+            }
+            .s-con-ul li
+            {
+                float:left;
+                width:100px;
+                margin-left:30px;
+            }
+            .con-ul li
+            {
+                float:left;
+                width:48%;
+            }
+            h5
+            {
+                font-size:20px;
+                margin-top:60px;
+                text-align:center;
+            }
+            .bdr
+            {
+                margin:20px auto;
+                width:200px;
+                border-bottom:solid 1px #8b8989;
+            }
+            .con-ul
+            {
+                margin-top:50px;
+            }
+            .share p
+            {
+
+                text-align:center;
+                margin-top:20px;
+            }
+            .active-menu
+            {
+                color: #F1774A;
+            }
+            .inactive-menu
+            {
+                color: #333;
+            }
+            /*CSS 3 ROTATE ACTIVITY START*/
+            #div-1:hover #rotate-1
+            {
+                -webkit-animation:rotate 1s; /* Safari 4+ */
+                -moz-animation:rotate 1s ; /* Fx 5+ */
+                -o-animation:rotate 1s; /* Opera 12+ */
+                animation:rotate 1s; /* IE 10+ */
+            }
+
+            #div-2:hover #rotate-2
+            {
+                -webkit-animation:rotate 1s; /* Safari 4+ */
+                -moz-animation:rotate 1s ; /* Fx 5+ */
+                -o-animation:rotate 1s; /* Opera 12+ */
+                animation:rotate 1s; /* IE 10+ */
+            }
+
+            #div-3:hover #rotate-3
+            {
+                -webkit-animation:rotate 1s; /* Safari 4+ */
+                -moz-animation:rotate 1s ; /* Fx 5+ */
+                -o-animation:rotate 1s; /* Opera 12+ */
+                animation:rotate 1s; /* IE 10+ */
+            }
+
+            #div-4:hover #rotate-4
+            {
+                -webkit-animation:rotate 1s; /* Safari 4+ */
+                -moz-animation:rotate 1s ; /* Fx 5+ */
+                -o-animation:rotate 1s; /* Opera 12+ */
+                animation:rotate 1s; /* IE 10+ */
+            }
+
+            /*CHROME/SAFARI BROWSER*/
+            @-webkit-keyframes rotate {
+                from { -webkit-transform: rotate(0deg); }
+            to { -webkit-transform: rotate(360deg); }
+            }
+            /*MOZILLA BROWSER*/
+            @-moz-keyframes rotate
+            {
+                from {
+                -moz-transform: rotate(0deg);
+            }
+            to {
+                -moz-transform: rotate(360deg);
+            }
+            }
+            /*OPERA BROWSER*/
+            @-o-keyframes rotate {
+                from {
+                -o-transform: rotate(0deg);
+            }
+            to {
+                -o-transform: rotate(360deg);
+            }
+            }
+            /*STANDARD*/
+            @keyframes rotate
+            {
+                from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+            }
+            /*CSS 3 ROTATE ACTIVITY END*/
+
+            /*CONATCT US FORM LABLE ANIMATION START*/
+            .contactactive
+            {
+                margin-top: -18px;
+            }
+            .input-container.contactactive label {
+                margin-left: 0px;
+                margin-top: -17px;
+                font-size: 10px;
+            }
+            /*CONATCT US FORM LABLE ANIMATION END*/
+
+
+        </style>
+        <link href="css/component.css" type="text/css" rel="stylesheet"/> 
+    </head>
+
+    <body>
+
+        <div id="sidebar">
+            <div id="nav-anchor"></div>
+            <div style="float:left;">
+                <a href="index.html"><img src="img/logo-facebook.png"> </a>
+            </div>
+            <div style="float:right;">
+                <nav class="stick">
+                    <ul id="top-band">
+                        <li><a href="#home" class="nav-active active-menu">Home</a></li>
+                        <li id="service-submenu"><a href="#services">Services</a></li>
+                        <li><a href="#our-work" >Our work</a></li>
+                        <li><a href="#contact" >Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id="content">
+            <section id="home" class="section">
+                <div class="wr-hol">
+                    <div class="header-part">
+                        <ul>
+                            <style>
+                                .bn
+                                {
+                                    background:url(img/banb-1.png);
+                                    background-position:0px 2px;
+                                    width:710px;
+                                    height:350px;
+                                    float:left;
+                                }
+                                .move
+                                {
+                                    position:absolute;
+                                    margin-left:-240px;
+                                    margin-top:10px;
+                                }
+                            </style>
+                            <li class="c-img"> 
+                                <div class="bn">
+                                    <img src="img/banb-2.png" class="move">
+                                </div>
+                            </li>
+                            <li>
+                                <h1>we create <span>the web</span></h1>
+                                <p>We help you to connect to the world effectively. Our engineers understand your requirement and deliver more than you wanted.</p>
+                                <div style="clear:both;margin-top:40px;"> <a href="" class="more">more about us</a> </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="services" class="section">
+                <div class="wr-hol" >
+                    <div class="feat">
+                        <h2><span>What</span> We Do</h2>
+                        <p class="desc">We build, customize, host websites based on your needs. We think as a visitor and make sure we are satisfied first and later everyone. We never compromise our quality and client focus is our main 
+
+                            strength.</p>
+                        <div class="">
+                            <ul>
+                                <li>
+                                    <ul class="icon-det">
+                                        <li id="div-1">
+                                            <a href="wordpress-development.html"> <div class="circle"> <img src="img/wordpresss-icon.png" style="margin-top: 5px;" class="rotate" id="rotate-1"/></div></a>
+                                            <div >
+                                                <a href="wordpress-development.html"><h3>WordPress development</h3>
+                                                    <p> WordPress is a simple blog with limited templates. Repetition of same design is very common. Our designers customize your WordPress page and give a unique look with all your widgets and functionalities.</p></a>
+                                            </div>
+                                        </li>
+                                        <li style="width:2px;border-right:solid 1px #ecebeb;height:105px;margin:0 50px;"> &nbsp; </li>
+                                        <li id="div-2">
+                                            <a href="psd-to-html-conversion.html"> <div class="circle"><img src="img/psd-to-html-icon.png" style="margin-top: 5px;" class="rotate" id="rotate-2"/></div></a>
+                                            <div >
+                                                <a href="psd-to-html-conversion.html"> <h3>PSD to HTML</h3>
+                                                    <p>Get your ideas transform into a real website. Share your ides with us in any common format, we will build the website with all your detailing and make it a picture-perfect.</p></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="fet-line">
+                                        <li> </li>
+                                        <li style="width:124px;border:none;"> </li>
+                                        <li> </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="icon-det">
+                                        <li id="div-3">
+                                            <div class="circle"> <a href="web-design.html">
+                                                    <img src="img/web-design-1.png" style="margin-top: 5px;" class="rotate" id="rotate-3"/>
+                                                </a></div>
+                                            <div >
+                                                <a href="web-design.html">   <h3>Website designing (both HTML/MAIL)</h3>
+                                                    <p>Our creative team analyzes the market and builds 100s of website ideas regularly.Get personalized email ids with your own email domain. Impress and help your customer remember your email id all the time. </p></a>
+                                            </div>
+                                        </li>
+                                        <li style="width:2px;border-right:solid 1px #ecebeb;height:105px;margin:0 50px;"> &nbsp; </li>
+                                        <li id="div-4">
+                                            <div class="circle"> <a href="" target="_blank" ><img src="img/server-hosting.png" style="margin-top: 5px;" class="rotate" id="rotate-4"/></a></div>
+                                            <div >
+                                                <h3>Web hosting</h3>
+                                                <p> Are you a .com, .org, .net, .co, .in? Choose a prefix for your website and we host it for you.</p>
+                                                <p> coming soon...</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="our-work" class="section">
+                <div class="wr-hol" >
+                    <div class="s-work">
+                        <h2><span>Sample Our</span> Work</h2>
+                        <div style="width:1100px;margin:50px auto;clear:both;">
+                            <ul>
+                                <li> <img src="img/sample-work-ipad.png"> </li>
+                                <li style="width:45%;">
+                                    <div class="w-point" style="margin-top:35px;">
+                                        <h4>Mobile and Responsive</h4>
+                                        <p>With over 1 billion mobile web users and growing, mobile 
+                                            and responsive development is more important than 
+                                            ever - let PSD2HTML help you.</p>
+                                    </div>
+                                    <div class="w-point">
+                                        <h4>Mobile and Responsive</h4>
+                                        <p>With over 1 billion mobile web users and growing, mobile 
+                                            and responsive development is more important than 
+                                            ever - let PSD2HTML help you.</p>
+                                    </div>
+                                    <div class="w-point">
+                                        <h4>Mobile and Responsive</h4>
+                                        <p>With over 1 billion mobile web users and growing, mobile 
+                                            and responsive development is more important than 
+                                            ever - let PSD2HTML help you.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <div class="wr-hol" style="border-bottom:none;" >
+                    <div class="con">
+                        <div style="width:1200px;margin:0 auto;">
+                            <h2>Contact Us!</h2>
+                            <ul class="con-ul">
+                                <li style="margin-right:30px;">
+                                    <h5>Lorem ipsum dolor sit amet, ne esset</h5>
+                                    <div class="bdr">&nbsp;</div>
+                                    <p> Connect with us to get connected to the world </p>
+                                </li>
+
+                                <style >
+
+                                    @mixin basefont {
+                                        font-family: sans-serif;
+                                        font-size: 16px;
+                                        line-height: 20px;
+                                        color: #555;
+                                        -webkit-font-smoothing: antialiased;
+                                    }
+                                    #Form {
+                                        background-color:#f2f2f2;
+                                        padding:40px 30px;
+                                        margin:0 auto;
+                                        overflow: hidden;
+                                        margin-left:20px;
+                                    }
+                                    #Form h1
+                                    {
+                                        text-transform:uppercase;
+                                        font-weight:400;
+                                        color:#333;
+                                        font-size:18px;
+                                        margin:10px auto;
+                                    }
+                                    button {
+                                        border: none;
+                                        background-color: #F1774A;
+                                        padding:8px;
+                                        color:#fff;
+                                        font-size:16px;
+                                    }
+                                    button:hover
+                                    {
+                                        background:#e45010;
+                                    }
+
+                                    .right {
+                                        float: right;
+                                    }
+                                    .left {
+                                        float:left;
+                                    }
+
+                                    .input-container {
+
+                                        /*background-color: pink;*/
+                                        margin: 0;
+                                        margin-bottom: 5px;
+                                        padding-top: 12px;
+                                        position: relative;
+
+                                    }
+                                    label {
+                                        position: absolute;
+                                        top: 14px;
+                                        left: 4px;
+                                        color: #aaa;
+                                        transition: all 0.2s;
+                                        cursor: text;
+
+                                        font-family: sans-serif;
+                                        font-size: 16px;
+                                        line-height: 24px;
+                                    }	
+
+                                    input, textarea {
+                                        height: 24px;
+                                        padding: 2px;
+                                        border: none;
+                                        border-bottom: 1px solid #ccc;
+                                        @include basefont;
+
+                                        outline: none;
+                                        width: 100%;
+                                        background:#f2f2f2;
+                                    }
+
+                                    input:focus, input.filled {
+
+                                        border-bottom: 1px solid #aaa;
+
+                                        + label {
+                                        font-size: 11px;
+                                        line-height: 12px;
+                                        top: 0px;
+                                        color: #777;
+                                    }
+
+                                </style>
+                                <li>
+                                    <div>
+                                        <div id="Form">
+                                            <!--<form class="form" name="Contact_me" action="https://creator.zoho.com/addRecordValidate.do" method="post" onsubmit="return validateContact();">-->
+
+                                            <h1>Tell us your business need</h1>
+
+                                            <div class="input-container">
+                                                <input id="Input-Name" name="Name" type="text" />
+                                                <label for="Input-Name">Name</label>
+                                            </div>
+                                            <div class="input-container">
+                                                <input id="Input-Email" name="Email" type="text" />
+                                                <label for="Input-Email">E-Mail</label>
+                                            </div>
+                                            <div class="input-container">
+                                                <textarea id="businessneed" name="businessneed"></textarea>
+                                                <label for="businessneed">Type your need</label>
+                                            </div>
+
+                                            <div class="input-container">
+
+                                                <button class="left" onclick="validateContact();">Get Touch</button>
+                                            </div>
+                                            <!--</form>-->
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="share">
+                <div style="width:1200px;margin:0 auto;">
+                    <h2 style="margin-bottom:10px;">Say Hello!</h2>
+                    <p>Go Social!! Connect with us via popular social channels</p>
+
+
+                    <div class="container">
+
+
+                        <section id="set-8">
+                            <div class="hi-icon-wrap hi-icon-effect-8">
+                                <a href="" target="_blank" class="hi-icon hi-icon-archive"><img src="img/linked-in.png"></a>
+                                <a href="https://twitter.com/workhtml" class="hi-icon hi-icon-chat"><img src="img/twitter.png"></a>
+                                <a href="https://www.facebook.com/workhtml" class="hi-icon hi-icon-bookmark"><img src="img/facebook.png"></a>
+                                <a href="" class="hi-icon hi-icon-user"><img src="img/google.png"></a>
+
+                            </div>
+                        </section>
+
+                    </div>
+
+
+                    <div style="clear:both;width:530px;margin:40px auto 20px;clear:both;overflow:auto;display:none;">
+                        <ul class="s-con-ul">
+                            <li> <a class="s-icon"><img src="img/linked-in.png"></a> </li>
+                            <li> <a class="s-icon"><img src="img/twitter.png"></a> </li>
+                            <li> <a class="s-icon"><img src="img/facebook.png"></a> </li>
+                            <li> <a class="s-icon"><img src="img/google.png"></a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center;padding:30px;">© 2014, Work HTML. All Rights Reserved. </div>
+
+
+        <script type="text/javascript" src="js/jquery-1.7.2.js"></script> 
+        <script type="text/javascript" src="js/jquery.scrollto.js"></script> 
+        <script type="text/javascript" src="js/application.js"></script> 
+        <script>
+            $(document).ready(function(){
+        
+                /** 
+                 * This part does the "fixed navigation after scroll" functionality
+                 * We use the jQuery function scroll() to recalculate our variables as the 
+                 * page is scrolled/
+                 */
+                $(window).scroll(function(){
+                    var window_top = $(window).scrollTop() ; // the "12" should equal the margin-top value for nav.stick
+                    var div_top = $('#nav-anchor').offset().top;
+                    if (window_top > div_top) {
+                        //alert('this is');
+                        $('nav').addClass('stick');
+                    } else {
+                        //$('nav').removeClass('stick');
+                    }
+                });
+        
+        
+                /**
+                 * This part causes smooth scrolling using scrollto.js
+                 * We target all a tags inside the nav, and apply the scrollto.js to it.
+                 */
+                $("nav a").click(function(evn){
+			
+                    evn.preventDefault();
+                    console.log("hash:::::"+this.hash);
+                    $('html,body').scrollTo(this.hash, this.hash); 
+                });
+        
+        
+        
+                /**
+                 * This part handles the highlighting functionality.
+                 * We use the scroll functionality again, some array creation and 
+                 * manipulation, class adding and class removing, and conditional testing
+                 */
+                var aChildren = $("#top-band li").children(); // find the a children of the list items
+                var aArray = []; // create the empty aArray
+                for (var i=0; i < aChildren.length; i++) {    
+                    var aChild = aChildren[i];
+                    var ahref = $(aChild).attr('href');
+                    aArray.push(ahref);
+                } // this for loop fills the aArray with attribute href values
+                console.log("aArray:::::"+aArray)
+        
+                $(window).scroll(function(){
+                    var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+                    var windowHeight = $(window).height(); // get the height of the window
+                    var docHeight = $(document).height();
+            
+                    for (var i=0; i < aArray.length; i++) {
+                        var theID = aArray[i];
+                        var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+                        var divHeight = $(theID).height(); // get the height of the div in question
+                        if (windowPos+50 >= divPos && windowPos < (divPos + divHeight-50)) {
+					
+                            $("a[href='" + theID + "']").addClass("nav-active active-menu");
+					
+                        } else {
+                            $("a[href='" + theID + "']").removeClass("nav-active active-menu");
+					
+                        }
+                    }
+            
+                    if(windowPos + windowHeight == docHeight) {
+                        if (!$("nav li:last-child a").hasClass("nav-active")) {
+                            var navActiveCurrent = $(".nav-active").attr("href");
+                            $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
+                            $("nav li:last-child a").addClass("nav-active");
+					
+                        }
+                    }
+                });
+            });
+            
+            //CONTACT US ANIMATION LABLE STRT
+            $(document).ready(function() {
+    
+                $('input,textarea').each(function() {
+        
+                    $(this).on('focus', function() {
+                        $(this).parent('.input-container').addClass('contactactive');
+                    });
+        
+                    $(this).on('blur', function() {
+                        if ($(this).val().length == 0) {
+                            $(this).parent('.input-container').removeClass('contactactive');
+                        }
+                    });
+                    if ($(this).val() != '') $(this).parent('.input-container').addClass('contactactive');
+        
+                });
+    
+            });
+
+            //CONTACT US ANIMATION LABLE END
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,1255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!--   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'/>  -->
+        <link href="favicon.ico" rel="SHORTCUT ICON"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <style>
+            html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, canvas, embed, output, ruby, summary, time, mark, audio, video {
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+                outline: 0;
+                margin: 0;
+                padding: 0
+            }
+            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+                display: block
+            }
+            body {
+                color: #666;
+                font-family: 'open sans', san-serif, arial;
+                font-size: 14px;
+                line-height: 20px;
+                margin: 0;
+                padding: 0
+            }
+            p
+            {
+                font-size:15px;
+                line-height:22px;
+                color:#666;
+            }
+            a
+            {
+                text-decoration:none;
+            }
+            ul, li
+            {
+                list-style-type:none;
+            }
+            /* smooth page down */
+            #sidebar {
+                width:97%;
+                position:fixed;
+                background:#fff;
+                height:30px;
+                top:0;
+                /* box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);*/
+                padding: 14px 20px 26px;
+                z-index:1;
+            }
+            .sha
+            {
+                box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);
+                -moz-box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);
+                -webkit-box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);
+            }
+            nav {
+                float:right;
+                width:391px;
+                /*overflow: auto;
+                position: absolute;
+                
+                margin:0 auto;
+                margin-left:110px;*/
+            }
+            /*nav.stick {
+               
+                left: 0;
+                margin-left: 0;
+                position: fixed;
+                top: 0;
+                z-index: 10000;
+            }*/
+            .stick ul
+            {
+                margin: 0 auto;
+                width: 766px;
+            }
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            nav li {
+                float: left;
+                margin:0 10px;
+            }
+            nav li a {
+                color: rgb(50,50,50);
+                font-size: 14px;
+                text-transform: uppercase;
+                padding:14px 10px 12px;
+                float:left;
+                /*background:#fff;
+                border:solid 1px #ddd;
+                border-right:none;
+                background:#f8f8f8;*/
+            }
+            nav.stick a.nav-active-sc {
+                /*border-bottom:solid 1px #ddd;
+                padding-bottom:12px;
+                background:#f9f9f9;*/
+                border-bottom:none;
+            }
+            a.nav-active-sc {
+                border-bottom: solid 3px #e45010;
+                padding-bottom:10px;
+                background:#fff;
+            }
+            nav.stick a.nav-active {
+                border-bottom: solid 3px #e45010;
+                padding-bottom:19px;
+                background:#fff;
+            }
+            a.nav-active {
+                border-bottom: solid 3px #e45010;
+                padding-bottom:8px;
+                background:#fff;
+            }
+            .main-div {
+                margin: 0 auto;
+                width: 980px;
+            }
+            section {
+                overflow: auto;
+            }
+
+            .wr-hol
+            {
+                width:1100px;
+                margin:0 auto;
+            }
+
+            h1
+            {
+                font-size:42px;
+                text-transform:uppercase;
+                color:#fff;
+                font-weight:600;
+                text-align:left;
+                margin-top:110px;
+                line-height:56px;
+            }
+            h1 span
+            {
+                font-weight:300;
+            }
+            .header-part li
+            {
+                width:48%;
+                float:left;
+            }
+
+            .header-part p
+            {
+                font-size:16px;
+                line-height:24px;
+                color:#fff;
+                font-weight:300;
+                margin-top:20px;
+                text-align:left;
+            }
+            .more
+            {
+                border:solid 1px #fff;
+                padding:10px 25px;
+                text-decoration:none;
+                color:#fff;
+                text-transform:uppercase;
+            }
+            .more:hover
+            {
+                background:#47c4ca;
+                color:#fff;
+                border:solid 1px #fff;
+            }
+            /* end smooth page down */
+
+            #content
+            {
+                margin:0 auto;
+                text-align:center;
+                margin-top:68px;
+            }
+            #home
+            {
+
+                background: #19b6bd;
+                padding:70px 0 40px;
+            }
+            #services
+            {
+
+                background:#fff;
+            }
+            #our-work
+            {
+
+                background:#8ac7a3;
+            }
+            #customers
+            {
+                background:#f3f3f3;
+            }
+            #contact
+            {
+
+                background:#fff;
+            }
+
+
+            /* services */
+            .feat
+            {
+                clear:both;
+                padding:70px 0;
+            }
+            h2
+            {
+                color:#333;
+                font-size:40px;
+                text-align:center;
+                line-height:50px;
+                font-weight:600;
+            }
+            h2 span
+            {
+                font-weight:300;
+            }
+            .desc
+            {
+                font-size:16px;
+                line-height:24px;
+                color:#333;
+                font-weight:300;
+                text-align:center;
+                width:750px;
+                margin:10px auto;
+                margin-bottom:70px;
+            }
+            .icon-det li
+            {
+                width:444px;
+                float:left;
+                padding-top:15px;
+            }
+            .fet-line 
+            {
+                clear:both;
+            }
+            .fet-line li
+            {
+                width:438px;
+                float:left;
+                border-bottom:solid 1px #ecebeb;
+                margin:60px 0;
+
+            }
+            .circle
+            {
+                border-radius:90px;
+                background:#19b6bd;
+                float:left;
+                width:100px;
+                height:100px;
+                float:left;
+                margin-right:30px;
+            }
+            .feat
+            {
+                width:1000px;
+                margin:0 auto;
+                padding-bottom:100px;
+                overflow:auto;
+            }
+            h3
+            {
+                font-size:18px;
+                color:#f1774a;
+                font-weight:400;
+                margin-bottom:12px;
+                text-align:left;
+                text-transform:uppercase;
+            }
+            .icon-det p
+            {
+                text-align:left;
+            }
+            /* end services*/
+            /* our work*/
+            .s-work
+            {
+                padding:80px 50px;
+                background:#8ac7a3;
+                overflow:auto;
+                clear:both;
+            }
+            .s-work li
+            {
+                float:left;
+                width:49%;
+            }
+            h4
+            {
+                font-size:38px;
+                line-height:48px;
+                margin-bottom:30px;
+                text-align:left;
+                font-weight:600;
+                color:#585858;
+                text-transform:uppercase;
+                text-align:center;
+            }
+            h4 span
+            {
+                font-weight:300;
+            }
+            .s-work p
+            {
+                color:#fff;
+                margin-top:10px;
+                text-align:left;
+                font-size:15px;
+            }
+            .w-point
+            {
+                clear:both;
+                margin-top:50px;
+            }
+            /* end our work*/
+
+            /* client start*/
+            .cli
+            {
+                background:#f3f3f3;
+                padding:100px 0;
+                overflow:auto;
+            }
+            .cli-det 
+            {
+                clear:both;
+            }
+            .cli-det li
+            {
+                width:300px;
+                float:left;
+                padding-top:15px;
+            }
+            .cli-line li
+            {
+                width:294px;
+                float:left;
+                border-bottom:solid 1px #8c8c8c;
+                margin:80px 0;
+
+            }
+            .cli-lo
+            {
+                width:1200px;
+                margin:0 auto;
+            }
+            .cli-circle
+            {
+                border-radius:90px;
+                background:#8b8989;
+                width:100px;
+                height:100px;
+                margin-right:30px;
+                margin:0 auto;
+            }
+            /* end client */
+            /* contact us section */
+            /* end contact us section */
+            .con
+            {
+                background:#fff;
+                padding:80px 0;
+                overflow:auto;
+            }
+            .share
+            {
+                background:#88c3f9;
+                padding:120px 0;
+                overflow:auto;
+                clear:both;
+            }
+            .s-con-ul li
+            {
+                float:left;
+                width:100px;
+                margin-left:30px;
+            }
+            .con-ul li
+            {
+                float:left;
+                width:48%;
+            }
+            h5
+            {
+                font-size: 20px;
+                font-weight: 400;
+                margin-bottom: 15px;
+                margin-top: 10px;
+                text-align: center;
+            }
+            .bdr
+            {
+                margin:20px auto;
+                width:200px;
+                border-bottom:solid 1px #8b8989;
+            }
+            .con-ul
+            {
+                margin-top:50px;
+            }
+            .share p
+            {
+                color:#fff;
+                text-align:center;
+                margin-top:20px;
+            }
+            .header-part
+            {
+                background:url(img/psd-to-html.png) no-repeat;
+                background-position:680px -70px;
+                height: 450px;
+            }
+
+            /* socail icons */
+            .thr-li .f-so li
+            {
+                margin:15px 0;
+            }
+            .fb, .tw, .li, .go
+            {
+                background:url(img/icon.png) no-repeat;
+                height: 1px;
+                padding: 2px 10px;
+                width: 1px;
+                margin-right:8px;
+            }
+            .fb
+            {
+                background-position: -542px -255px;
+            }
+            .tw
+            {
+                background-position: -542px -289px;
+            }
+            .li
+            {
+                background-position: -542px -323px;
+            }
+            .go
+            {
+                background-position: -542px -358px;
+            }
+            /* end socail end*/
+            .active-menu
+            {
+                color: #F1774A;
+            }
+            .inactive-menu
+            {
+                color: #333;
+            }
+
+            /*TYPING EFFECT @KEYFRAMES CSS3 FUNCTIONALITIES START*/
+            .typing{
+                color:#e9cd46; 
+                font-family: "Courier";
+                font-size: 20px;
+                margin: 10px 0 0 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 300px;
+                -webkit-animation:type 4s steps(60, end); 
+                animation: type 4s steps(60, end); 
+                -moz-animation: type 4s steps(60, end); 
+                -o-animation: type 4s steps(60, end);
+            }
+            .typing:nth-child(1){
+                color:#e9cd46; 
+            }
+            /*HTML TAG OPEN*/
+            .typing:nth-child(2){
+                color:#5b98c4;
+                -webkit-animation:type2 6s steps(60, end);
+                animation: type2 6s steps(60, end);
+                -moz-animation: type2 6s steps(60, end);
+                -o-animation: type2 6s steps(60, end);
+            }
+            /*BODY TAG OPEN*/
+            .typing:nth-child(3){
+                color:#f27160;
+                margin:5px 0px 0px 30px;
+                -webkit-animation:type2 8s steps(60, end);
+                animation: type2 8s steps(60, end);
+                -moz-animation: type2 8s steps(60, end);
+                -o-animation: type2 8s steps(60, end);
+            }
+            .typing:nth-child(4){
+                color:#fff;
+                margin:9px 0px 0px 95px;
+                -webkit-animation:type2 9s steps(60, end);
+                animation: type2 10s steps(60, end);
+                -moz-animation: type2 10s steps(60, end);
+                -o-animation: type2 10s steps(60, end);
+            }
+            /*BODY TAG CLOSE*/
+            .typing:nth-child(5){
+                color:#f27160;
+                margin:5px 0px 0px 30px;
+                -webkit-animation:type2 12s steps(60, end);
+                animation: type2 12s steps(60, end);
+                -moz-animation: type2 12s steps(60, end);
+                -o-animation: type2 12s steps(60, end);
+            }
+
+            /*HTML TAG CLOSE*/
+            .typing:nth-child(6){
+                color:#5b98c4;
+                -webkit-animation:type2 14s steps(60, end);
+                animation: type2 14s steps(60, end);
+                -moz-animation: type2 14s steps(60, end);
+                -o-animation: type2 14s steps(60, end);
+
+            }
+
+            #cursor{
+                -webkit-animation: blink 1s infinite;
+                animation: blink 1s infinite;
+                -moz-animation: blink 1s infinite;
+                -o-animation: blink 1s infinite;
+
+            }
+            /*CHROME/SAFARI BROWSER*/
+            @-webkit-keyframes  type{ 
+                from { width: 0; } 
+            } 
+            /*MOZILLA BROWSER*/
+            @-moz-keyframes type{ 
+                from { width: 0; } 
+            } 
+            /*OPERA BROWSER*/
+            @-o-keyframes  type{ 
+                from { width: 0; } 
+            } 
+            /*STANDARD*/
+            @keyframes  type{ 
+                from { width: 0; } 
+            } 
+
+            /*CHROME/SAFARI BROWSER*/
+            @-webkit-keyframes  type2{
+                0%{width: 0;}
+            50%{width: 0;}
+            100%{ width: 100; } 
+            }
+            /*MOZILLA BROWSER*/
+            @-moz-keyframes  type2{
+                0%{width: 0;}
+            50%{width: 0;}
+            100%{ width: 100; } 
+            }
+            /*OPERA BROWSER*/
+            @-o-keyframes  type2{
+                0%{width: 0;}
+            50%{width: 0;}
+            100%{ width: 100; } 
+            }
+            /*STANDARD*/
+            @keyframes  type2{
+                0%{width: 0;}
+            50%{width: 0;}
+            100%{ width: 100; } 
+            }
+
+            /*CHROME/SAFARI BROWSER*/
+            @-webkit-keyframes  blink{
+                to{opacity: .0;}
+            }
+            /*MOZILLA BROWSER*/
+            @-moz-keyframes  blink{
+                to{opacity: .0;}
+            }
+            /*OPERA BROWSER*/
+            @-o-keyframes  blink{
+                to{opacity: .0;}
+            }
+            /*STANDARD*/
+            @keyframes blink{
+                to{opacity: .0;}
+            }
+
+            /*TYPING EFFECT @KEYFRAMES CSS3 FUNCTIONALITIES END*/
+        </style>
+        <link href="css/component.css" type="text/css" rel="stylesheet"/> 
+    </head>
+
+    <body>
+
+        <div id="sidebar">
+            <div id="nav-anchor"></div>
+            <div style="float:left;">
+                <a href="index.html"><img src="img/logo-facebook.png"> </a>
+            </div>
+            <div style="float:right;">
+                <nav class="stick">
+                    <ul >
+                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="index.html" class="nav-active active-menu">Services</a></li>
+                        <li><a href="index.html" >Our work</a></li>
+
+                        <li><a href="index.html" >Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+        <div id="content">
+            <section id="home">
+                <div class="wr-hol">
+                    <div class="header-part">
+                        <ul>
+                            <style>
+                                .bn
+                                {
+                                    height:350px;
+                                    float:left;
+                                }
+                                .br-top
+                                {
+                                    background:#d4d4d4;
+                                    border-radius: 4px 4px 0 0;
+                                    overflow:auto;
+                                    padding:10px;
+                                    width:500px;
+                                }
+                                .br-ac li
+                                {
+                                    background:#c03825;
+                                    border-radius:20px;
+                                    height: 15px;
+                                    margin-left: 6px;
+                                    width: 15px;
+
+                                }
+                                .br-bod
+                                {
+                                    background:#4a4a4a;
+                                    padding:20px;
+                                    height: 415px;
+                                }
+                            </style>
+                            <li class="c-img"> 
+                                <div class="bn">
+                                    <div class="br-top">
+                                        <ul class="br-ac">
+                                            <li>
+                                            </li>
+                                            <li style="background:#f39d00;">
+                                            </li>
+                                            <li style="background:#22b05c;">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="br-bod" id="texttyping">
+
+                                        <!--
+                                        Typing effect will play here
+                                        -->
+                                        <p class="typing">&lt;!DOCTYPE html&gt;</p>
+                                        <p class="typing">&lt;HTML&gt;</p>
+                                        <p class="typing">&lt;BODY&gt;</p>
+
+                                        <p class="typing">Welcome to workhtml.com
+                                            :)</p> 
+                                        <p class="typing">&lt;/BODY&gt;</p>
+                                        <p class="typing">&lt;/HTML&gt;<span id="cursor">|</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="padding-left: 50px;  width: 40%;">
+                                <h1>PSD to HTML <span>conversion</span></h1>
+                                <p>Get your ideas transform into a real website. Share your ides with us in any common format, we will build the website with all your
+detailing and make it a picture-perfect. </p>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="services">
+                <div class="wr-hol" >
+                    <div class="feat">
+                        <h2>Why Choosen <span style="font-weight:300;">WorkHTML</span> </h2>
+                        <p class="desc">We have the best resources, people, and ideas to provide best service. We are customer focused and we ensure our customers are
+satisfied. </p>
+                        <div class="">
+                            <ul>
+                                <li>
+                                    <ul class="icon-det">
+                                        <li>
+
+                                            <div>
+                                                <h3>good communication & support</h3>
+                                                <p>Our work is not
+over after delivering the website; we stand by and look after for any
+improvements or modifications. Our support team helps you to get the
+appropriate support all the time. </p>
+                                            </div>
+                                        </li>
+                                        <li style="width:2px;border-right:solid 1px #ecebeb;height:105px;margin:0 50px;"> &nbsp; </li>
+                                        <li>
+
+                                            <div>
+                                                <h3>100% satisfaction</h3>
+                                                <p> We make sure that we
+are well equipped to deliver world class service to each of our client and
+assure their satisfaction. We are fully committed and customer satisfaction is
+our primary goal.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="fet-line">
+                                        <li> </li>
+                                        <li style="width:124px;border:none;"> </li>
+                                        <li> </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="icon-det">
+                                        <li>
+
+                                            <div>
+                                                <h3>best development team</h3>
+                                                <p>Our specialized development team is well experienced and built sites for our clients across the world. Our development team not just creates websites, they analyze, build and achieve
+that the best product is released from their end.  </p>
+                                            </div>
+                                        </li>
+                                        <li style="width:2px;border-right:solid 1px #ecebeb;height:105px;margin:0 50px;"> &nbsp; </li>
+                                        <li>
+
+                                            <div>
+                                                <h3>quick process</h3>
+                                                <p>We understand
+things quickly, so we get the work done quickly with efficiency.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <style>
+                .why-c
+                {
+                    background:#BBE9EB;
+                    padding:60px 0;
+                    overflow:auto;
+                }
+                .c-sup, .deve
+                {
+                    background:url(img/icon.png) no-repeat #fff;
+                    margin:0 auto;
+                    border-radius: 100px;
+                }
+                .why-c li
+                {
+                    float:left;
+                    width:47%;
+                }
+                .why-c h5
+                {
+                    font-size: 18px;
+                    margin-top: 30px;
+                    text-align: center;
+                    text-transform: uppercase;
+
+                }
+                .why-c p
+                {
+                    text-align:center;
+                }
+                .c-sup 
+                {
+                    background-position: 27px 64px;
+                    height:180px;
+                    width:180px;
+                }
+                .deve
+                {
+                    background-position: -145px 54px;
+                    height: 180px;
+                    width: 180px;
+                }
+            </style>
+            <div class="why-c">
+                <div style="margin:0 auto;width:1000px;">
+                    <ul>
+                        <li>
+                            <div class="c-sup">
+                            </div>
+                            <h5>Customer Support</h5>
+                            <p>We are customer focused and customer satisfaction is our
+primary motto. Get in touch with our Support Executive and help us to provide
+you first-class service. </p>
+                        </li>
+                        <li style="margin-left:60px;">
+                            <div class="deve">
+                            </div>
+                            <h5>experienced developer</h5>
+                            <p>Our developers are well experienced and well equipped. We
+get ourselves updated regularly to align us to the current trend.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+        <style>
+            <style>
+            .chec-li
+            {
+                margin-bottom: 20px;
+                overflow: auto;
+            }
+            .chec-l
+            {
+                float: left;
+                padding-right: 10px;
+                width: 34%;
+            }
+            .chec-li a
+            {
+                color:#666;
+            }
+            .chec-li li
+            {
+                margin:20px 0;
+            }
+            .chec-li li h6
+            {
+                font-size:16px;
+                color:#666;
+                margin-bottom:33px;
+                text-transform:uppercase;
+                font-weight:400;
+                border-bottom: 1px solid #e7e7e7;
+                width:75%;
+                padding-bottom:3px;
+            }
+            .chec-l span
+            {
+                background:url(img/icon.png) no-repeat;
+                background-position:-11px -121px;
+                height: 30px;
+                margin-right:5px;
+                padding: 0 9px;
+                width: 2px;
+            }
+        </style>
+        </style>
+
+
+        <div>
+
+            <div style="width:900px;margin:50px auto 60px;overflow:auto;">
+                <h4>our checklist <span>with your assignment</span></h4>
+                <ul class="chec-li">
+                    <li class="chec-l">
+                        <ul>
+                            <li>
+                                <h6>code quality</h6>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>HTML validation</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>CSS validation</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Run CSS Lint</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Automated testing</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Cross platform support</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Clear format</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chec-l">
+                        <ul>
+                            <li>
+                                <h6>performance</h6>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Google Page Speed score of 90+</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Yahoo YSlow score of 85+</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Optimize HTTP headers</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Optimize images</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Optimized css</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Bundled images</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chec-l" style="width:28%;">
+                        <ul>
+                            <li>
+                                <h6>SEO</h6>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Google Rich Snippets</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>SenSEO score of 85+</div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <style>
+            .pro-c
+            {
+                background:#BBE9EB;
+                padding:60px 0 30px;
+                overflow:auto;
+            }
+            .pro-1, .pro-2, .pro-3
+            {
+                background:url(img/icon.png) no-repeat #fff;
+                margin:0 auto;
+                border-radius: 100px;
+            }
+            .pro-c li
+            {
+                float: left;
+                margin-left: 30px;
+                width: 34%;
+            }
+            .pro-c h5
+            {
+                font-size: 18px;
+                margin-top: 30px;
+                text-align: center;
+                text-transform: uppercase;
+
+            }
+            .pro-c p
+            {
+                text-align:center;
+                width:600px;
+                margin:0 auto;
+            }
+            .pro-1
+            {
+                background-position: 31px -166px;
+                height:180px;
+                width:180px;
+                float: left;
+            }
+            .pro-2
+            {
+                background-position: -161px -169px;
+                height:180px;
+                width:180px;
+                float: left;
+            }
+            .pro-3
+            {
+                background-position: -335px -175px;
+                height:180px;
+                width:180px;
+                float:left;
+            }
+            .m-ar
+            {
+                background:url(img/icon.png) no-repeat;
+                background-position:-465px -64px;
+                height: 80px;
+                width: 80px;
+                margin-top: 60px;
+                float:left;
+                margin-left:40px;
+                opacity:0.1;
+            }
+            .p-cir
+            {
+                width:30px;
+                height:25px;
+                background:#30bdc3;
+                border-radius:30px;
+                position:absolute;
+                color:#fff;
+                font-weight:600;
+                text-align:center;
+                padding-top:5px;
+                margin-left: 32px;
+            }
+            .circle-fade-out
+            {
+                opacity: 1;
+                transition: opacity 1s; 
+            }
+            .circle-fade-in
+            {
+                opacity: 0.2;
+                transition: opacity 1s; 
+            }
+
+            /*OUR PROCESS MOVE RIGHT - LEFT ANIMATION ARROW START*/
+            .move-left-to-right
+            {
+                opacity:1;
+                -webkit-animation:moveArrow 1000ms infinite;
+                animation: moveArrow 1000ms infinite;
+                -moz-animation: moveArrow 1000ms infinite;
+                -o-animation: moveArrow 1000ms infinite;
+            }
+
+            /*CHROME/SAFARI BROWSER*/
+            @-webkit-keyframes  moveArrow{
+                from {margin-left: 32px;}
+            to {margin-left: 50px;}
+            }
+            /*MOZILLA BROWSER*/
+            @-moz-keyframes  moveArrow{
+                from {margin-left: 32px;}
+            to {margin-left: 50px;}
+            }
+            /*OPERA BROWSER*/
+            @-o-keyframes  moveArrow{
+                from {margin-left: 32px;}
+            to {margin-left: 50px;}
+            }
+            /*STANDARD*/
+            @keyframes  moveArrow{
+                from {margin-left: 32px;}
+            to {margin-left: 50px;}
+            }
+            /*OUR PROCESS MOVE RIGHT - LEFT ANIMATION ARROW END*/
+        </style>
+        <div class="pro-c">
+            <h4>our process</h4>
+            <div style="margin:50px auto;width:1000px;">
+                <div id="process">
+                    <ul style="padding-left:40px;">
+                        <li style="margin-left:0;">
+                            <div class="pro-1 circle"> 
+                            </div>
+                            <div class="p-cir">
+                                1
+                            </div>
+                            <div class="m-ar">&nbsp;</div>
+                        </li>
+                        <li>
+                            <div class="pro-2 circle">
+                            </div>
+                            <div class="p-cir">
+                                2
+                            </div>
+                            <div class="m-ar">&nbsp;</div>
+                        </li>
+                        <li style="width:20%;">
+                            <div class="pro-3 circle">
+                            </div>
+                            <div class="p-cir">
+                                3
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div style="clear:both;overflow:auto;padding-top:20px;" id="processMsg0">
+                    <h5>Submit your PSD</h5>
+                    <p>We get PSD format then convert it to HTML</p>
+                </div>
+                <div style="clear:both;overflow:auto;padding-top:20px;display:none;" id="processMsg1">
+                    <h5> We analyze and execute</h5>
+                    <p>We analyze your requirements and start setting our timeline</p>
+                </div>
+                <div style="clear:both;overflow:auto;padding-top:20px;display:none;" id="processMsg2">
+                    <h5>Accurate and Timely delivery</h5>
+                    <p>We promise to deliver with assigned timeline</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <style>
+            .f-band
+            {
+                margin: 0 auto;
+                overflow: auto;
+                padding:50px 0;
+                width:980px;
+            }
+            .f-band a
+            {
+                float:right; padding:17px 20px;background:#F1774A;color:#fff;width:260px; 
+                font-size: 20px;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 400;
+
+            }
+            .f-band a:hover
+            {
+                background:#eb633d;
+            }
+            .f-band h2
+            {
+                font-size: 22px;float: left;line-height:30px;margin-top:10px;
+                font-weight: 400;
+                color:#666;
+            }
+        </style>
+        <div class="f-band">
+            <h2>10000 Projects completed for clients from 30 countries</h2><a href="contactus.html">Order Now</a>
+        </div>
+
+        <style>
+            .f-m-ul
+            {
+                margin-bottom: 20px;
+                overflow: auto;
+            }
+            .thr-li
+            {
+                width:40%;
+                float:left;
+            }
+            .thr-li a
+            {
+                color:#A0A0A0;
+            }
+            .thr-li li
+            {
+                margin:8px 0;
+            }
+            .thr-li li h6
+            {
+                font-size:16px;
+                color:#666;
+                margin-bottom: 20px;
+                text-transform:uppercase;
+                font-weight:400;
+            }
+        </style>
+        <div style="background:#F3F3F3;border-top:solid 1px #DBDBDB;padding-top:20px;">
+            <div style="width:900px;margin:0 auto;">
+                <ul class="f-m-ul">
+                    <li class="thr-li">
+                        <ul>
+                            <li>
+                                <h6>services</h6>
+                            </li>
+                            <li>
+                                <a href="">Wordpress Developement</a>
+                            </li>
+                            <li>
+                                <a href="">PSD to HTML Conversion</a>
+                            </li>
+                            <li>
+                                <a href="">Website Design</a>
+                            </li>
+                            <li>
+                                <a href="">Web hosting</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="thr-li">
+                        <ul>
+                            <li>
+                                <h6>Resources</h6>
+                            </li>
+                            <li>
+                                <a href="">Blog</a>
+                            </li>
+                            <li>
+                                <a href="">About Us</a>
+                            </li>
+                            <li>
+                                <a href="">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="">Sample work</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="thr-li" style="width:16%;">
+                        <ul class="f-so">
+                            <li>
+                                <h6>social</h6>
+                            </li>
+
+                            <li>
+                                <a href=""><span class="fb">&nbsp;</span>Facebook</a>
+                            </li>
+                            <li>
+                                <a href=""><span class="tw">&nbsp;</span>Twitter</a>
+                            </li>
+                            <li>
+                                <a href=""><span class="li">&nbsp;</span>Linkedin</a>
+                            </li>
+                            <li>
+                                <a href=""><span class="go">&nbsp;</span>Google plus</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div style="text-align:center;padding:10px;clear:both;width:980px;margin:0 auto;border-top:solid 1px #E9E9E9;color: #A0A0A0;">© 2014, Work HTML. All Rights Reserved. </div>
+        </div>
+        <script type="text/javascript" src="js/scroll.js"></script> 
+        <script type="text/javascript" src="js/jquery-1.7.2.js"></script> 
+        <script type="text/javascript" src="js/jQueryRotate.js"></script> 
+        <script type="text/javascript" src="js/application.js"></script> 
+        <script>
+            //circles("process",{"milliSecond":"4000","circleClassName":"circle","circleSubClassName":"m-ar","totalCircleCount":"3","callback":"ourProcessCallback"});
+            circles("process",{"milliSecond":"4000","circleClassName":"circle","circleSubClassName":"m-ar","totalCircleCount":"3","callback":ourProcessCallback});
+        </script>
+    </body>
+
+</html>
+

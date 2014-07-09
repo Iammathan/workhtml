@@ -1,0 +1,1332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'/>  
+        <link href="favicon.ico" rel="SHORTCUT ICON"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <style>
+            html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, canvas, embed, output, ruby, summary, time, mark, audio, video {
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+                outline: 0;
+                margin: 0;
+                padding: 0
+            }
+            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+                display: block
+            }
+            body {
+                color: #666;
+                font-family: 'open sans', san-serif, arial;
+                font-size: 14px;
+                line-height: 20px;
+                margin: 0;
+                padding: 0
+            }
+            p
+            {
+                font-size:15px;
+                line-height:22px;
+                color:#666;
+            }
+            a
+            {
+                text-decoration:none;
+            }
+            ul, li
+            {
+                list-style-type:none;
+            }
+            /* smooth page down */
+            #sidebar {
+                width:97%;
+                position:fixed;
+                background:#fff;
+                height:30px;
+                top:0;
+                /* box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);*/
+                padding: 14px 20px 26px;
+                z-index:1;
+            }
+            .sha
+            {
+                box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);
+                -moz-box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);
+                -webkit-box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);
+            }
+            nav {
+                float:right;
+                width:391px;
+                /*overflow: auto;
+                position: absolute;
+                
+                margin:0 auto;
+                margin-left:110px;*/
+            }
+            /*nav.stick {
+               
+                left: 0;
+                margin-left: 0;
+                position: fixed;
+                top: 0;
+                z-index: 10000;
+            }*/
+            .stick ul
+            {
+                margin: 0 auto;
+                width: 766px;
+            }
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            nav li {
+                float: left;
+                margin:0 10px;
+            }
+            nav li a {
+                color: rgb(50,50,50);
+                font-size: 14px;
+                text-transform: uppercase;
+                padding:14px 10px 12px;
+                float:left;
+                /*background:#fff;
+                border:solid 1px #ddd;
+                border-right:none;
+                background:#f8f8f8;*/
+            }
+            nav.stick a.nav-active-sc {
+                /*border-bottom:solid 1px #ddd;
+                padding-bottom:12px;
+                background:#f9f9f9;*/
+                border-bottom:none;
+            }
+            a.nav-active-sc {
+                border-bottom: solid 3px #e45010;
+                padding-bottom:10px;
+                background:#fff;
+            }
+            nav.stick a.nav-active {
+                border-bottom: solid 3px #e45010;
+                padding-bottom:19px;
+                background:#fff;
+            }
+            a.nav-active {
+                border-bottom: solid 3px #e45010;
+                padding-bottom:8px;
+                background:#fff;
+            }
+            .main-div {
+                margin: 0 auto;
+                width: 980px;
+            }
+            section {
+                overflow: auto;
+            }
+
+            .wr-hol
+            {
+                width:1150px;
+                margin:0 auto;
+            }
+
+            h1
+            {
+                font-size:42px;
+                text-transform:uppercase;
+                color:#fff;
+                font-weight:600;
+                text-align:left;
+                margin-top:110px;
+                line-height:56px;
+            }
+            h1 span
+            {
+                font-weight:300;
+            }
+            .header-part li
+            {
+                width:48%;
+                float:left;
+            }
+
+            .header-part p
+            {
+                font-size:16px;
+                line-height:24px;
+                color:#fff;
+                font-weight:300;
+                margin-top:20px;
+                text-align:left;
+            }
+            .more
+            {
+                border:solid 1px #fff;
+                padding:10px 25px;
+                text-decoration:none;
+                color:#fff;
+                text-transform:uppercase;
+            }
+            .more:hover
+            {
+                background:#47c4ca;
+                color:#fff;
+                border:solid 1px #fff;
+            }
+            /* end smooth page down */
+
+            #content
+            {
+                margin:0 auto;
+                text-align:center;
+                margin-top:68px;
+            }
+            section#about-webdesign
+            {
+
+                background: #19b6bd;
+                padding:70px 0 40px;
+                height:450px;
+            }
+            section#main-features
+            {
+
+                background:#fff;
+            }
+            #our-work
+            {
+
+                background:#8ac7a3;
+            }
+            #customers
+            {
+                background:#f3f3f3;
+            }
+            #contact
+            {
+
+                background:#fff;
+            }
+
+
+            /* services */
+            .feat
+            {
+                clear:both;
+                padding:70px 0;
+            }
+            h2
+            {
+                color:#333;
+                font-size:40px;
+                text-align:center;
+                line-height:50px;
+                font-weight:600;
+            }
+            h2 span
+            {
+                font-weight:300;
+            }
+            .desc
+            {
+                font-size:16px;
+                line-height:24px;
+                color:#333;
+                font-weight:300;
+                text-align:center;
+                width:750px;
+                margin:10px auto;
+                margin-bottom:70px;
+            }
+            .icon-det li
+            {
+                width:360px;
+                float:left;
+                margin-left:20px;
+                padding-top:15px;
+            }
+            .fet-line 
+            {
+                clear:both;
+            }
+            .fet-line li
+            {
+                width:438px;
+                float:left;
+                border-bottom:solid 1px #ecebeb;
+                margin:60px 0;
+
+            }
+            .circle
+            {
+                border-radius:90px;
+                background:#19b6bd;
+                float:left;
+                width:100px;
+                height:100px;
+                float:left;
+                margin-right:30px;
+            }
+            .feat
+            {
+
+                margin:0 auto;
+                padding-bottom:100px;
+                overflow:auto;
+            }
+            .icon-det h3
+            {
+                font-size:18px;
+                color:#f1774a;
+                font-weight:400;
+                margin-bottom:12px;
+                text-align:left;
+                text-transform:uppercase;
+                padding-top:2px;
+
+            }
+            .icon-det p
+            {
+                text-align:left;
+            }
+            /* end services*/
+            /* our work*/
+            .s-work
+            {
+                padding:80px 50px;
+                background:#8ac7a3;
+                overflow:auto;
+                clear:both;
+            }
+            .s-work li
+            {
+                float:left;
+                width:49%;
+            }
+            h4
+            {
+                font-size:38px;
+                line-height:48px;
+                margin-bottom:50px;
+                text-align:left;
+                font-weight:600;
+                color:#585858;
+                text-transform:uppercase;
+                text-align:center;
+            }
+            h4 span
+            {
+                font-weight:300;
+            }
+            .s-work p
+            {
+                color:#fff;
+                margin-top:10px;
+                text-align:left;
+                font-size:15px;
+            }
+            .w-point
+            {
+                clear:both;
+                margin-top:50px;
+            }
+            /* end our work*/
+
+            /* client start*/
+            .cli
+            {
+                background:#f3f3f3;
+                padding:100px 0;
+                overflow:auto;
+            }
+            .cli-det 
+            {
+                clear:both;
+            }
+            .cli-det li
+            {
+                width:300px;
+                float:left;
+                padding-top:15px;
+            }
+            .cli-line li
+            {
+                width:294px;
+                float:left;
+                border-bottom:solid 1px #8c8c8c;
+                margin:80px 0;
+
+            }
+            .cli-lo
+            {
+                width:1200px;
+                margin:0 auto;
+            }
+            .cli-circle
+            {
+                border-radius:90px;
+                background:#8b8989;
+                width:100px;
+                height:100px;
+                margin-right:30px;
+                margin:0 auto;
+            }
+            /* end client */
+            /* contact us section */
+            /* end contact us section */
+            .con
+            {
+                background:#fff;
+                padding:80px 0;
+                overflow:auto;
+            }
+            .share
+            {
+                background:#88c3f9;
+                padding:120px 0;
+                overflow:auto;
+                clear:both;
+            }
+            .s-con-ul li
+            {
+                float:left;
+                width:100px;
+                margin-left:30px;
+            }
+            .con-ul li
+            {
+                float:left;
+                width:48%;
+            }
+            h5
+            {
+                font-size: 20px;
+                font-weight: 400;
+                margin-bottom: 15px;
+                margin-top: 10px;
+                text-align: center;
+            }
+            .bdr
+            {
+                margin:20px auto;
+                width:200px;
+                border-bottom:solid 1px #8b8989;
+            }
+            .con-ul
+            {
+                margin-top:50px;
+            }
+            .share p
+            {
+                color:#fff;
+                text-align:center;
+                margin-top:20px;
+            }
+            /*  .header-part
+              {
+                  background:url(img/psd-to-html.png) no-repeat;
+                  background-position:680px -70px;
+                  height: 450px;
+              }*/
+
+            /* socail icons */
+            .thr-li .f-so li
+            {
+                margin:15px 0;
+            }
+            .fb, .tw, .li, .go
+            {
+                background:url(img/icon.png) no-repeat;
+                height: 1px;
+                padding: 2px 10px;
+                width: 1px;
+                margin-right:8px;
+            }
+            .fb
+            {
+                background-position: -542px -255px;
+            }
+            .tw
+            {
+                background-position: -542px -289px;
+            }
+            .li
+            {
+                background-position: -542px -323px;
+            }
+            .go
+            {
+                background-position: -542px -358px;
+            }
+            /* end socail end*/
+
+            .active-menu
+            {
+                color: #F1774A;
+            }
+            .inactive-menu
+            {
+                color: #333;
+            }
+
+
+
+
+        </style>
+        <link href="css/component.css" type="text/css" rel="stylesheet"/> 
+    </head>
+
+    <body>
+
+        <div id="sidebar">
+            <div id="nav-anchor"></div>
+            <div style="float:left;">
+                <a href="index.html"><img src="img/logo-facebook.png"> </a>
+            </div>
+            <div style="float:right;">
+                <nav class="stick">
+                    <ul >
+                        <li><a href="index.html" >Home</a></li>
+                        <li id="wh-services"><a href="#" class="nav-active active-menu">Services</a></li>
+                        <style>
+                            
+                            .dropdownDiv ul
+                            {
+                                position: absolute;
+                                padding-top: 64px;
+                                width: 350px;
+                                
+                            }
+                            .dropdownDiv li:first-child{
+                                background: url("./img/icon-up-arrow.png") no-repeat;
+                                border: none;
+                                height: 7px;
+                                left: 20%;
+                                margin-left: 57px;
+                                position: absolute;
+                                top: 58px;
+                                width: 13px;
+                                z-index: 49;
+                            }
+                            .dropdownDiv li {
+                                background: none repeat scroll 0 0 #FFF;
+                                border: 1px solid #DDD;
+                                padding: 0px 0;
+                                position: relative;
+                                z-index: 1;
+                            }
+                            .dropdownDiv li a {
+                                border-top: 1px dotted #ECECEC;
+                                color: #555;
+                                display: block;
+                                font-style: normal;
+                                width: 93%;
+                            }
+                        </style>
+                        <div class="dropdownDiv" style="display: none;" id="service-dropdown">
+                            <ul>
+                                <li></li>
+                                <li> 
+                                    <a href="wordpress-development.html">Wordpress Development</a>
+                                    <a href="psd-to-html-conversion.html">PSD to HTML</a>
+                                    <a href="web-design.html">Web Design</a>
+                                    <a href="#">Web Hosting (coming soon)</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <li><a href="#our-work" >Our work</a></li>
+
+                        <li><a href="#contact" >Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+        <div id="content">
+            <section id="about-webdesign">
+                <div class="wr-hol">
+                    <div class="header-part">
+                        <ul>
+                            <style>
+                                .bn
+                                {
+                                    height:350px;
+                                    float:left;
+                                }
+                                .br-top
+                                {
+                                    background:#d4d4d4;
+                                    border-radius: 4px 4px 0 0;
+                                    overflow:auto;
+                                    padding:10px;
+                                    width:500px;
+                                }
+                                .br-ac li
+                                {
+                                    background:#c03825;
+                                    border-radius:20px;
+                                    height: 15px;
+                                    margin-left: 6px;
+                                    width: 15px;
+
+                                }
+                                .br-bod
+                                {
+                                    background:#4a4a4a;
+                                    padding:20px;
+                                    height: 415px;
+                                }
+                            </style>
+                            <li class="c-img"> 
+                                <div class="bn">
+                                    <img src="img/web-design-top.png">
+                                </div>
+                            </li>
+                            <li style="padding-left: 50px;  width: 40%;">
+                                <h1>Website design
+                                    <span>services</span></h1>
+                                <p>We provide world class services with our well equipped and innovative designers. Our
+
+main focus is customer satisfaction, so we have strict quality standards and we never 
+
+compromise.</p>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="main-features">
+                <div class="wr-hol" >
+                    <div class="feat">
+                        <h2>Main  <span style="font-weight:300;">Features</span> </h2>
+                        <p class="desc">We are dedicated to WordPress. We are not simply consultants, we are a concentrated team of creatives and coders 
+                            capable of fulfilling</p>
+
+
+                        <style>
+                            .ic-ar
+                            {
+                                background:#f1783e;
+                                width:80px;
+                                height:80px;
+                                border-radius:50px;
+                                float:left;
+                                margin-right:10px;
+                                text-align:center;
+                            }
+                        </style>
+                        <div class="">
+                            <ul>
+                                <li>
+                                    <ul class="icon-det">
+                                        <li>
+
+                                            <div>
+                                                <span class="ic-ar"><img src="img/html5.png" style="margin-top:17px;"></span>
+                                                <h3>HTML5 & CSS3</h3>
+                                                <p>Will use advanaced HTML Tag's and CSS3 element for
+
+your webpage</p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+
+
+                                            <div>
+                                                <span class="ic-ar"><img src="img/response-design.png" style="margin-top:17px;"></span>
+                                                <h3>Responsive Design</h3>
+                                                <p>Quick, prompt and interactive designs to create an engaged web experience</p>
+                                            </div>
+
+                                        </li>
+                                        <li>
+
+
+                                            <div>
+                                                <span class="ic-ar"><img src="img/browser-compatability.png" style="margin-top:17px;"></span>
+                                                <h3>Browser Compatability</h3>
+                                                <p>The cross browser compatibility website without any trouble</p>
+                                            </div>
+
+                                        </li>
+
+
+
+                                    </ul>
+                                </li>
+
+                                <li style="margin-top:80px;float:left;">
+                                    <ul class="icon-det">
+                                        <li>
+
+                                            <div>
+                                                <span class="ic-ar"><img src="img/html5.png" style="margin-top:17px;"></span>
+                                                <h3>Unique & Modern</h3>
+                                                <p>We think out of box, so we stand out with our very own unique and modern designs</p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+
+
+                                            <div>
+                                                <span class="ic-ar"><img src="img/seo.png" style="margin-top:17px;"></span>
+                                                <h3>SEO</h3>
+                                                <p>We not just build websites, we ensure it reaches people with advanced SEO contents. This helps to list your website on when a user tries to search in a search engines such as Google.</p>
+                                            </div>
+
+                                        </li>
+                                        <li>
+
+
+                                            <div>
+                                                <span class="ic-ar"><img src="img/load-time.png" style="margin-top:17px;"></span>
+                                                <h3>Page Load Time</h3>
+                                                <p>We value the time of the users, so they don’t have to wait for the content to load. The in-
+built CSS helps to reduce the load time and provides a faster experience.</p>
+                                            </div>
+
+                                        </li>
+
+
+
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <style>
+                section#our-strong
+                {
+                    background:#19b6bd;
+                    padding:60px 0 70px;
+                    overflow:auto;
+                }
+                .c-sup, .deve
+                {
+
+                    margin:0 auto;
+
+                }
+                section#our-strong li
+                {
+                    float:left;
+                    width:47%;
+                }
+                section#our-strong h5
+                {
+                    font-size: 18px;
+                    margin-top: 30px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color:#fff;
+
+                }
+                section#our-strong p
+                {
+                    text-align:center;
+                    color:#fff;
+                }
+
+            </style>
+            <section id="our-strong">
+                <h2 style="color:#fff;margin-bottom:30px;">Our <span>Strongs</span></h2>
+                <div style="margin:0 auto;width:1000px;">
+                    <ul>
+                        <li>
+                            <div class="c-sup">
+
+                                <img src="img/bulder.png">
+                            </div>
+                            <h5>Website Redesign</h5>
+                            <p>Your website build by any other (Wordpress,zoomla)site builders? No worry! we can redesign your existing website as your wish</p>
+                        </li>
+                        <li style="margin-left:60px;">
+                            <div class="deve">
+                                <img src="img/cms-1.png">
+                            </div>
+                            <h5>Our Design</h5>
+                            <p>Our developers are well experienced and well equipped. They understood your requirement and give world class perfect design for your requirements</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+
+
+        </div>
+        <style>
+            <style>
+            .chec-li
+            {
+                margin-bottom: 20px;
+                overflow: auto;
+            }
+            .chec-l
+            {
+                float: left;
+                padding-right: 10px;
+                width: 34%;
+            }
+            .chec-li a
+            {
+                color:#666;
+            }
+            .chec-li li
+            {
+                margin:20px 0;
+            }
+            .chec-li li h6
+            {
+                font-size:16px;
+                color:#666;
+                margin-bottom:33px;
+                text-transform:uppercase;
+                font-weight:400;
+                border-bottom: 1px solid #e7e7e7;
+                width:75%;
+                padding-bottom:3px;
+            }
+            .chec-l span
+            {
+                background:url(img/icon.png) no-repeat;
+                background-position:-11px -121px;
+                height: 30px;
+                margin-right:5px;
+                padding: 0 9px;
+                width: 2px;
+            }
+            .o-wrk li
+            {
+                float:left;
+                width:350px;
+            }
+            .o-wrk img
+            {
+                box-shadow:2px 2px 2px #eaeaea;
+            }
+        </style>
+        
+
+
+        <div>
+            <style>
+                section#our-works
+                {
+                    margin:0 auto 60px;
+                    overflow:auto;
+                    background:#f6f6f6;
+                    padding:70px 0;
+                    border-bottom:solid 1px #e3e3e3;
+                }
+            </style>
+            <section id="our-works">
+                <h4>Our Happy <span>Works</span></h4>
+
+                <div style="width:1100px;margin:0 auto;">
+                    <ul class="o-wrk">
+                        <li>
+                            <img src="img/wrk-1.png">
+                        </li>
+                        <li>
+                            <img src="img/wrk-2.png">
+                        </li>
+                        <li>
+                            <img src="img/wrk-3.png">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+
+
+
+            <style>
+                section#our-checklist
+                {
+                    width:900px;
+                    margin:50px auto 60px;
+                    overflow:auto;
+                }
+            </style>
+
+            <section id="our-checklist">
+                <h4>our checklist <span>with your assignment</span></h4>
+                <ul class="chec-li">
+                    <li class="chec-l">
+                        <ul>
+                           <li>
+                                <h6>code quality</h6>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>HTML validation</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>CSS validation</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Run CSS Lint</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Automated testing</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Mobility</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Unique Templates</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chec-l">
+                        <ul>
+                            <li>
+                                <h6>performance</h6>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Google Page Speed score of 90+</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Yahoo YSlow score of 85+</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Optimize HTTP headers</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Optimize images</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Optimized css</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Bundled images</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chec-l" style="width:28%;">
+                        <ul>
+                            <li>
+                                <h6>Design/SEO</h6>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>UI and User Experience</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Sociability</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>No Flash</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Latest HTML/CSS</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>Google Rich Snippets</div>
+                            </li>
+                            <li>
+                                <div><span>&nbsp;</span>SenSEO score of 85+</div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+
+
+
+        <style>
+            .pro-c
+            {
+                background:#BBE9EB;
+                padding:60px 0 30px;
+                overflow:auto;
+            }
+            .pro-1, .pro-2, .pro-3
+            {
+                background:url(img/icon.png) no-repeat #fff;
+                margin:0 auto;
+                border-radius: 100px;
+            }
+            .pro-c li
+            {
+                float: left;
+                margin-left: 30px;
+                width: 23%;
+            }
+            .pro-c h5
+            {
+                font-size: 18px;
+                margin-top: 30px;
+                text-align: center;
+                text-transform: uppercase;
+
+            }
+            .pro-c p
+            {
+                text-align:center;
+                width:600px;
+                margin:0 auto;
+            }
+            .pro-1
+            {
+                background-position: 31px -166px;
+                height:180px;
+                width:180px;
+                float: left;
+            }
+            .pro-2
+            {
+                background-position: -161px -169px;
+                height:180px;
+                width:180px;
+                float: left;
+            }
+            .pro-3
+            {
+                background-position: -335px -175px;
+                height:180px;
+                width:180px;
+                float:left;
+            }
+            .m-ar
+            {
+                background:url(img/icon.png) no-repeat;
+                background-position:-465px -64px;
+                height: 80px;
+                width: 80px;
+                margin-top: 60px;
+                float:left;
+                margin-left:40px;
+                opacity:0.1;
+            }
+            .p-cir
+            {
+                width:30px;
+                height:25px;
+                background:#30bdc3;
+                border-radius:30px;
+                position:absolute;
+                color:#fff;
+                font-weight:600;
+                text-align:center;
+                padding-top:5px;
+                margin-left: 32px;
+            }
+            .circle-fade-out
+            {
+                opacity: 1;
+                transition: opacity 1s; 
+            }
+            .circle-fade-in
+            {
+                opacity: 0.2;
+                transition: opacity 1s; 
+            }
+
+            /*OUR PROCESS MOVE RIGHT - LEFT ANIMATION ARROW START*/
+            .move-left-to-right
+            {
+                opacity:1;
+                -webkit-animation:moveArrow 1000ms infinite;
+                animation: moveArrow 1000ms infinite;
+                -moz-animation: moveArrow 1000ms infinite;
+                -o-animation: moveArrow 1000ms infinite;
+            }
+
+            /*CHROME/SAFARI BROWSER*/
+            @-webkit-keyframes  moveArrow{
+                from {margin-left: 32px;}
+            to {margin-left: 50px;}
+            }
+            /*MOZILLA BROWSER*/
+            @-moz-keyframes  moveArrow{
+                from {margin-left: 32px;}
+            to {margin-left: 50px;}
+            }
+            /*OPERA BROWSER*/
+            @-o-keyframes  moveArrow{
+                from {margin-left: 32px;}
+            to {margin-left: 50px;}
+            }
+            /*STANDARD*/
+            @keyframes  moveArrow{
+                from {margin-left: 32px;}
+            to {margin-left: 50px;}
+            }
+            /*OUR PROCESS MOVE RIGHT - LEFT ANIMATION ARROW END*/
+        </style>
+        <section class="pro-c" id="webdesign-our-process">
+            <h4>our process</h4>
+            <div style="margin:50px auto;width:100%;">
+                <div id="process">
+                    <ul style="padding-left:40px;">
+                        <li style="margin-left:0;">
+                            <div class="pro-1 circle circle-fade-in"> 
+                            </div>
+                            <div class="p-cir">
+                                1
+                            </div>
+                            <div class="m-ar m-ar">&nbsp;</div>
+                        </li>
+                        <li>
+                            <div class="pro-2 circle circle-fade-in">
+                            </div>
+                            <div class="p-cir">
+                                2
+                            </div>
+                            <div class="m-ar m-ar">&nbsp;</div>
+                        </li>
+                        <li>
+                            <div class="pro-3 circle circle-fade-in">
+                            </div>
+                            <div class="p-cir">
+                                3
+                            </div>
+                            <div class="m-ar m-ar">&nbsp;</div>
+                        </li>
+                      <li>
+                            <div class="pro-3 circle circle-fade-in">
+                            </div>
+                            <div class="p-cir">
+                                4
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div style="clear:both;overflow:auto;padding-top:20px;" id="processMsg0">
+                    <h5>Your input with our process</h5>
+                    <p>Your website requirements can be provided in any way and we will transfer them into right way</p>
+                </div>
+                <div style="clear:both;overflow:auto;padding-top:20px;display:none;" id="processMsg1">
+                    <h5>Analyze & Planning</h5>
+                    <p>We analyze your requirements and start setting our timeline</p>
+                </div>
+                <div style="clear:both;overflow:auto;padding-top:20px;display:none;" id="processMsg2">
+                    <h5>Execution, Development and Testing</h5>
+                    <p>With the agreed timeline, we finalize the requirements and our development team starts creating your dream website, followed by a complete validation by our testing team</p>
+                </div>
+                <div style="clear:both;overflow:auto;padding-top:20px;display:none;" id="processMsg3">
+                    <h5>Delivery</h5>
+                    <p>After going through all quality measures, we will deliver the complete and final product on time as agreed</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <style>
+            .f-band
+            {
+                margin: 0 auto;
+                overflow: auto;
+                padding:50px 0;
+                width:980px;
+            }
+            .f-band a
+            {
+                float:right; padding:17px 20px;background:#F1774A;color:#fff;width:260px; 
+                font-size: 20px;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 400;
+
+            }
+            .f-band a:hover
+            {
+                background:#eb633d;
+            }
+            .f-band h2
+            {
+                font-size: 22px;float: left;line-height:30px;margin-top:10px;
+                font-weight: 400;
+                color:#666;
+            }
+        </style>
+        <section class="f-band" id="webdesign-ordernow">
+            <h2>Click it and make it beautiful designs for your business websites</h2><a href="contactus.html">Order Now</a>
+        </section>
+
+        <style>
+            .f-m-ul
+            {
+                margin-bottom: 20px;
+                overflow: auto;
+            }
+            .thr-li
+            {
+                width:40%;
+                float:left;
+            }
+            .thr-li a
+            {
+                color:#A0A0A0;
+            }
+            .thr-li li
+            {
+                margin:8px 0;
+            }
+            .thr-li li h6
+            {
+                font-size:16px;
+                color:#666;
+                margin-bottom: 20px;
+                text-transform:uppercase;
+                font-weight:400;
+            }
+        </style>
+        <!--FOOTER STYLES START-->
+        <style>
+            .footer-container
+            {
+               background:#F3F3F3;
+               border-top:solid 1px #DBDBDB;
+               padding-top:20px; 
+            }
+        </style>
+        <!--FOOTER STYLES END-->
+        <section class="footer-container" id="footer">
+            <div style="width:900px;margin:0 auto;">
+                <ul class="f-m-ul">
+                    <li class="thr-li">
+                        <ul>
+                            <li>
+                                <h6>services</h6>
+                            </li>
+                            <li>
+                                <a href="">Wordpress Developement</a>
+                            </li>
+                            <li>
+                                <a href="">PSD to HTML Conversion</a>
+                            </li>
+                            <li>
+                                <a href="">Website Design</a>
+                            </li>
+                            <li>
+                                <a href="">Web hosting</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="thr-li">
+                        <ul>
+                            <li>
+                                <h6>Resources</h6>
+                            </li>
+                            <li>
+                                <a href="">Blog</a>
+                            </li>
+                            <li>
+                                <a href="">About Us</a>
+                            </li>
+                            <li>
+                                <a href="">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="">Sample work</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="thr-li" style="width:16%;">
+                        <ul class="f-so">
+                            <li>
+                                <h6>social</h6>
+                            </li>
+
+                            <li>
+                                <a href=""><span class="fb">&nbsp;</span>Facebook</a>
+                            </li>
+                            <li>
+                                <a href=""><span class="tw">&nbsp;</span>Twitter</a>
+                            </li>
+                            <li>
+                                <a href=""><span class="li">&nbsp;</span>Linkedin</a>
+                            </li>
+                            <li>
+                                <a href=""><span class="go">&nbsp;</span>Google plus</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <style>
+                .copyright
+                {
+                    text-align:center;
+                    padding:10px;
+                    clear:both;
+                    width:980px;
+                    margin:0 auto;
+                    border-top:solid 1px #E9E9E9;
+                    color: #A0A0A0;
+                }
+            </style>
+            <div class="copyright">© 2014, Work HTML. All Rights Reserved. </div>
+        </section>
+        <script type="text/javascript" src="js/scroll.js"></script> 
+        <script type="text/javascript" src="js/jquery-1.7.2.js"></script> 
+        <script type="text/javascript" src="js/jQueryRotate.js"></script> 
+        <script type="text/javascript" src="js/application.js"></script> 
+        <script>
+            $(document).ready(function(){
+        
+                var sectionsList = $("section"); // find the a children of the list items
+                var aArray = []; // create the empty aArray
+                for (var i=0; i < sectionsList.length; i++) {    
+                    var section = sectionsList[i];
+                    var sectionid = $(section).attr('id');
+                    aArray.push(sectionid);
+                } // this for loop fills the aArray with attribute href values
+                console.log("aArray:::::"+aArray)
+                var isOurProcessStart=false;
+                $(window).scroll(function(){
+                    var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+                    for (var i=0; i < aArray.length; i++) {
+                        var theID = "#"+aArray[i];
+                        var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+                        var divHeight = $(theID).height(); // get the height of the div in question
+                        if (windowPos+50 >= divPos && windowPos < (divPos + divHeight-50)) {
+                            
+                            //check our process action start/not
+                            if(theID === "#webdesign-our-process" && !isOurProcessStart)
+                            {
+                                console.log("Our process animation should call at one while page load ")
+                                isOurProcessStart=true;
+                                circles("process",{"milliSecond":"4000","circleClassName":"circle","circleSubClassName":"m-ar","totalCircleCount":"3","callback":ourProcessCallback});
+                            }
+                        } 
+                        /*else {
+                            $("a[href='" + theID + "']").removeClass("nav-active active-menu");
+					
+                        }*/
+                    }
+                });
+                
+                //WORKHTML[DOT]COM SERVICE SUBMENU
+                $( "#wh-services" ).click(function() {
+                    if(document.getElementById("service-dropdown").style.display === "none")
+                    {
+                        console.log("display : block part")
+                        document.getElementById("service-dropdown").style.display="block";
+                    }
+                    else
+                    {
+                        document.getElementById("service-dropdown").style.display="none";
+                    }
+                });
+            });
+            
+        </script>
+    </body>
+
+</html>
+

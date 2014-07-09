@@ -1,0 +1,566 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link href="favicon.ico" rel="SHORTCUT ICON"/>
+        <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'/> -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <style>
+            html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, canvas, embed, output, ruby, summary, time, mark, audio, video {
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+                outline: 0;
+                margin: 0;
+                padding: 0
+            }
+            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+                display: block
+            }
+            body {
+                color: #666;
+                font-family: 'open sans', san-serif, arial;
+                font-size: 14px;
+                line-height: 20px;
+                margin: 0;
+                padding: 0
+            }
+            p {
+                font-size: 15px;
+                line-height: 22px;
+                color: #666;
+            }
+            a {
+                text-decoration: none;
+            }
+            ul, li {
+                list-style-type: none;
+            }
+            /* smooth page down */
+            #sidebar {
+                width: 97%;
+                position: fixed;
+                background: #fff;
+                height: 30px;
+                top: 0;
+                padding: 14px 20px 26px;
+                z-index: 1;
+            }
+            .sha {
+                box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);
+                -moz-box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);
+                -webkit-box-shadow: 1px 3px 3px -2px rgb(221, 221, 221);
+            }
+            nav {
+                float: right;
+                width: 391px;
+            }
+            .stick ul {
+                margin: 0 auto;
+                width: 766px;
+            }
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            nav li {
+                float: left;
+                margin: 0 10px;
+            }
+            nav li a {
+                color: rgb(50,50,50);
+                font-size: 14px;
+                text-transform: uppercase;
+                padding: 14px 10px 12px;
+                float: left;
+            }
+            nav.stick a.nav-active-sc {
+                border-bottom: none;
+            }
+            a.nav-active-sc {
+                border-bottom: solid 3px #e45010;
+                padding-bottom: 10px;
+                background: #fff;
+            }
+            nav.stick a.nav-active {
+                border-bottom: solid 3px #e45010;
+                padding-bottom: 19px;
+                background: #fff;
+            }
+            a.nav-active {
+                border-bottom: solid 3px #e45010;
+                padding-bottom: 8px;
+                background: #fff;
+            }
+            .main-div {
+                margin: 0 auto;
+                width: 980px;
+            }
+            section {
+                overflow: auto;
+            }
+            .wr-hol {
+                width: 1100px;
+                margin: 0 auto;
+            }
+            h1 {
+                font-size: 42px;
+                text-transform: uppercase;
+                color: #fff;
+                font-weight: 600;
+                text-align: left;
+                margin-top: 90px;
+                line-height: 56px;
+            }
+            h1 span {
+                font-weight: 300;
+            }
+            .header-part li {
+                width: 48%;
+                float: left;
+            }
+            .header-part p {
+                font-size: 16px;
+                line-height: 24px;
+                color: #fff;
+                font-weight: 300;
+                margin-top: 20px;
+                text-align: left;
+            }
+            .more {
+                border: solid 1px #fff;
+                padding: 10px 25px;
+                text-decoration: none;
+                color: #fff;
+                text-transform: uppercase;
+            }
+            .more:hover {
+                background: #47c4ca;
+                color: #fff;
+                border: solid 1px #fff;
+            }
+            #content {
+                margin: 0 auto;
+                text-align: center;
+                margin-top: 68px;
+            }
+            #home {
+                background: #19b6bd;
+                padding: 50px 0 40px;
+            }
+            #services {
+                background: #fff;
+            }
+            #our-work {
+                background: #8ac7a3;
+            }
+            #customers {
+                background: #f3f3f3;
+            }
+            #contact {
+                background: #fff;
+            }
+            .feat {
+                clear: both;
+                padding: 70px 0;
+            }
+            h2 {
+                color: #333;
+                font-size: 40px;
+                text-align: center;
+                line-height: 50px;
+                font-weight: 600;
+            }
+            h2 span {
+                font-weight: 300;
+            }
+            .desc {
+                font-size: 16px;
+                line-height: 24px;
+                color: #333;
+                font-weight: 300;
+                text-align: center;
+                width: 750px;
+                margin: 10px auto;
+                margin-bottom: 70px;
+            }
+            .icon-det li {
+                width: 444px;
+                float: left;
+                padding-top: 15px;
+            }
+            .fet-line {
+                clear: both;
+            }
+            .fet-line li {
+                width: 438px;
+                float: left;
+                border-bottom: solid 1px #ecebeb;
+                margin: 60px 0;
+            }
+            .circle {
+                border-radius: 90px;
+                background: #19b6bd;
+                float: left;
+                width: 100px;
+                height: 100px;
+                float: left;
+                margin-right: 30px;
+            }
+            .feat {
+                width: 1000px;
+                margin: 0 auto;
+                padding-bottom: 100px;
+                overflow: auto;
+            }
+            h3 {
+                font-size: 18px;
+                color: #f1774a;
+                font-weight: 400;
+                margin-bottom: 12px;
+                text-align: left;
+                text-transform: uppercase;
+            }
+            .icon-det p {
+                text-align: left;
+            }
+            /* end services*/
+            /* our work*/
+            .s-work {
+                padding: 80px 50px;
+                background: #8ac7a3;
+                overflow: auto;
+                clear: both;
+            }
+            .s-work li {
+                float: left;
+                width: 49%;
+            }
+            h4 {
+                font-size: 38px;
+                line-height: 48px;
+                margin-bottom: 30px;
+                text-align: left;
+                font-weight: 600;
+                color: #585858;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            h4 span {
+                font-weight: 300;
+            }
+            .s-work p {
+                color: #fff;
+                margin-top: 10px;
+                text-align: left;
+                font-size: 15px;
+            }
+            .w-point {
+                clear: both;
+                margin-top: 50px;
+            }
+            /* end our work*/
+
+            /* client start*/
+            h5 {
+                font-size: 20px;
+                font-weight: 400;
+                margin-bottom: 15px;
+                margin-top: 10px;
+                text-align: center;
+            }
+            .header-part {
+                background: url(img/wordpress-logo-1.png) no-repeat;
+                background-position: 700px -8px;
+                height: 450px;
+            }
+            /* socail icons */
+            .thr-li .f-so li {
+                margin: 15px 0;
+            }
+            .fb, .tw, .li, .go {
+                background: url(img/icon.png) no-repeat;
+                height: 1px;
+                padding: 2px 10px;
+                width: 1px;
+                margin-right: 8px;
+            }
+            .fb {
+                background-position: -542px -255px;
+            }
+            .tw {
+                background-position: -542px -289px;
+            }
+            .li {
+                background-position: -542px -323px;
+            }
+            .go {
+                background-position: -542px -358px;
+            }
+            /* end socail end*/
+            .f-band {
+                margin: 0 auto;
+                overflow: auto;
+                padding: 50px 0;
+                width: 980px;
+            }
+            .f-band a {
+                float: right;
+                padding: 17px 20px;
+                background: #F1774A;
+                color: #fff;
+                width: 260px;
+                font-size: 20px;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+            .f-band a:hover {
+                background: #eb633d;
+            }
+            .f-band h2 {
+                font-size: 22px;
+                float: left;
+                line-height: 30px;
+                margin-top: 10px;
+                font-weight: 400;
+                color: #666;
+            }
+            /* */
+            .why-c {
+                background: #BBE9EB;
+                padding: 60px 0;
+                overflow: auto;
+            }
+            .c-sup, .deve {
+                background: url(img/icon.png) no-repeat #fff;
+                margin: 0 auto;
+                border-radius: 100px;
+            }
+            .why-c li {
+                float: left;
+                width: 47%;
+            }
+            .why-c h5 {
+                font-size: 18px;
+                margin-top: 30px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .why-c p {
+                text-align: center;
+            }
+            .c-sup {
+                background-position: 27px 64px;
+                height: 180px;
+                width: 180px;
+            }
+            .deve {
+                background-position: -145px 54px;
+                height: 180px;
+                width: 180px;
+            }
+            .bn {
+                height: 350px;
+                float: left;
+            }
+            /* footer links */
+            .f-m-ul {
+                margin-bottom: 20px;
+                overflow: auto;
+            }
+            .thr-li {
+                width: 40%;
+                float: left;
+            }
+            .thr-li a {
+                color: #A0A0A0;
+            }
+            .thr-li li {
+                margin: 8px 0;
+            }
+            .thr-li li h6 {
+                font-size: 16px;
+                color: #666;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+            /* end footer */
+            .active-menu
+            {
+                color: #F1774A;
+            }
+            .inactive-menu
+            {
+                color: #333;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="sidebar">
+            <div id="nav-anchor"></div>
+            <div style="float:left;"> <a href="index.html"><img src="img/logo-facebook.png"> </a> </div>
+            <div style="float:right;">
+                <nav class="stick">
+                    <ul >
+                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="" class="nav-active active-menu">Services</a></li>
+                        <li><a href="index.html" >Our work</a></li>
+
+                        <li><a href="index.html" >Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="content">
+            <section id="home">
+                <div class="wr-hol">
+                    <div class="header-part">
+                        <ul>
+                            <li class="c-img">
+                                <div class="bn"> <img src="img/example-theme.png" class="move"> </div>
+                            </li>
+                            <li style="padding-left: 50px;  width: 40%;">
+                                <h1>WordPress <span>Development</span></h1>
+                                <p>WordPress is a simple blog with limited templates. Repetition of same design is very common. Our designers customize your WordPress page and give a unique look with all your widgets and functionalities.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="services">
+                <div class="wr-hol" >
+                    <div class="feat">
+                        <h2>Services</h2>
+                        <p class="desc">WordPress is currently used by more than 60 millions sites and most preferred CMS. We are focused towards the fast growth of WordPress and master ourselves to provide top class service.</p>
+                        <div class="">
+                            <ul>
+                                <li>
+                                    <ul class="icon-det">
+                                        <li>
+                                            <div>
+                                                <h3>SIMPLE BLOG CUSTOMIZE</h3>
+                                                <p> WordPress pages are different in their size starting from 1 to 100s. We believe even a single word can change the world, same as a simple blog. We ensure even a single page is customized based on the requirements. </p>
+                                            </div>
+                                        </li>
+                                        <li style="width:2px;border-right:solid 1px #ecebeb;height:105px;margin:0 50px;"> &nbsp; </li>
+                                        <li>
+                                            <div>
+                                                <h3>THEME DESIGN</h3>
+                                                <p> Enhance your WordPress site with unique designs created by our designers. Get the tailor made designs for your website and make it more attractive. </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="fet-line">
+                                        <li> </li>
+                                        <li style="width:124px;border:none;"> </li>
+                                        <li> </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="icon-det">
+                                        <li>
+                                            <div>
+                                                <h3>THEME DEVELOPMENT</h3>
+                                                <p>We create themes with CSS, HTML, and PHP to give the fine look and feel of your website. This will help you to perform any quick changes of the visual design and layout of a WordPress site. </p>
+                                            </div>
+                                        </li>
+                                        <li style="width:2px;border-right:solid 1px #ecebeb;height:105px;margin:0 50px;"> &nbsp; </li>
+                                        <li>
+                                            <div>
+                                                <h3>PLUGIN DEVELOPMENT</h3>
+                                                <p> Add customized functions to your website with our variety of plugins. We write PHP codes to automate the functionalities you look for. </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="why-c">
+                <div style="margin:0 auto;width:1000px;">
+                    <ul>
+                        <li>
+                            <div class="c-sup"> </div>
+                            <h5>Customer Support</h5>
+                            <p>We are customer focused and customer satisfaction is our primary motto. Get in touch with our Support Executive and help us to provide you first-class service. </p>
+                        </li>
+                        <li style="margin-left:60px;">
+                            <div class="deve"> </div>
+                            <h5>experienced developer</h5>
+                            <p>Our developers are well experienced and well equipped. We get ourselves updated regularly to align us to the current trend. </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="f-band">
+            <h2>10000 Projects completed for clients from 30 countries</h2>
+            <a href="contactus.html">Order Now</a> </div>
+        <div style="background:#F3F3F3;border-top:solid 1px #DBDBDB;padding-top:20px;">
+            <div style="width:900px;margin:0 auto;">
+                <ul class="f-m-ul">
+                    <li class="thr-li">
+                        <ul>
+                            <li>
+                                <h6>services</h6>
+                            </li>
+                            <li> <a href="">Wordpress Developement</a> </li>
+                            <li> <a href="">PSD to HTML Conversion</a> </li>
+                            <li> <a href="">Website Design</a> </li>
+                            <li> <a href="">Web hosting</a> </li>
+                        </ul>
+                    </li>
+                    <li class="thr-li">
+                        <ul>
+                            <li>
+                                <h6>Resources</h6>
+                            </li>
+                            <li> <a href="">Blog</a> </li>
+                            <li> <a href="">About Us</a> </li>
+                            <li> <a href="">Contact Us</a> </li>
+                            <li> <a href="">Sample work</a> </li>
+                        </ul>
+                    </li>
+                    <li class="thr-li" style="width:16%;">
+                        <ul class="f-so">
+                            <li>
+                                <h6>social</h6>
+                            </li>
+                            <li> <a href=""><span class="fb">&nbsp;</span>Facebook</a> </li>
+                            <li> <a href=""><span class="tw">&nbsp;</span>Twitter</a> </li>
+                            <li> <a href=""><span class="li">&nbsp;</span>Linkedin</a> </li>
+                            <li> <a href=""><span class="go">&nbsp;</span>Google plus</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div style="text-align:center;padding:10px;clear:both;width:980px;margin:0 auto;border-top:solid 1px #E9E9E9;color: #A0A0A0;">© 2014, Work HTML. All Rights Reserved. </div>
+        </div>
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js">
+        </script> 
+        <script>
+            window.onscroll = scroll;  
+            function scroll()  
+            {
+                var windowHeight = $(document).height();
+                var position = window.pageYOffset;
+                if (position > 470 ) 
+                {
+                    $('#sidebar').addClass('sha');
+                }
+                else
+                {
+                    $('#sidebar').removeClass('sha');
+                }
+            }
+        </script>
+    </body>
+</html>
