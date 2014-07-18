@@ -151,7 +151,7 @@ function sendRequest(url,callback,paramObj,requestType)
     $("#Input-Name").val("");
     $("#Input-Email").val("");
     $("#businessneed").val("");
-    alert("Thanks for submit your message.please check your mail for further.");
+    alert("Thanks for connecting with us. We will get back to you shortly.");
     
    },
     success: callback
@@ -168,5 +168,5 @@ function getIdObj(idd)
 
 function contactCallback(result)
 {
-    alert("Thanks for submit your message.please check your mail for further.")
+    alert("Thanks for connecting with us. We will get back to you shortly.")
 }
