@@ -114,6 +114,11 @@ function validateContact()
         name=getIdObj("Input-Name").value;
         if(getIdObj("Input-Email") != null && getIdObj("Input-Email").value != "")
         {
+            if(!validateEmail( getIdObj("Input-Email").value))
+            {
+                alert("Please enter valid Email address");
+                return;
+            }
             email=getIdObj("Input-Email").value;
             if(getIdObj("Input-Name") != null && getIdObj("Input-Name").value != "")
             {
@@ -166,6 +171,15 @@ function getIdObj(idd)
     return document.getElementById(idd);
 }
 
+//Validate proper Email string..(check used by :regex")
+function validateEmail(email) { 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(re.test(email))
+    {
+        return true;
+    }
+    return false;
+} 
 function contactCallback(result)
 {
     alert("Thanks for connecting with us. We will get back to you shortly.")

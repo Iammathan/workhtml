@@ -4,7 +4,7 @@
         <link href="favicon.ico" rel="SHORTCUT ICON"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="Keywords" content="Workhtml,Website Design,wordpress developement,PSD to HTML Conversion,psd to xhtml service,online HTML Works,convert psd files to html,web html design,Wordpress Themes,wordpress templates,Wesite Services,professional web design companies,web design company,web solutions company,custom web design company,web hosting website,ecommerce hosting,webhosting,cheap web hosting plans,cheap web hosting,cheap hosting,best web hosting,web hosting server,server hosting" />
-        <meta name="description" content="Workhtml service help you to convert your PSD to HTML/XHTML format and wordpress related works.You can redesign/design your business model into real time also we can host it your design in live."
+        <meta name="description" content="Workhtml service help you to convert your PSD to HTML/XHTML and wordpress related works.You can redesign/design your business model into real time also we can host it your design in live." />
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'/>
         <style>
             html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, canvas, embed, output, ruby, summary, time, mark, audio, video {
@@ -333,6 +333,10 @@
                 clear:both;
                 margin-top:50px;
             }
+            .w-point h4
+            {
+                font-weight: 400;
+            }
             /* end our work*/
 
             /* client start*/
@@ -634,35 +638,87 @@
                 </div>
             </section>
             <section id="our-work" class="section">
+                 <style>
+                            .round-point {
+                                top: 20px;
+                                left: -10px;
+                                width: 10px;
+                                height: 10px;
+                                position: absolute;
+                                background: #0099DA;
+                                margin: 0 0 0 -17px;
+                                box-shadow: 0 0 0 4px #EEE;
+                                -webkit-font-smoothing: antialiased;
+                                border-radius: 30px;
+                                z-index: 20;
+                            }
+                                #navigation {
+                                    width: 52px;
+                                    height: 76px;
+                                    display: none;
+                                    background: url(./img/next-prev.png) no-repeat;
+                                    position: absolute;
+                                    right: -170px;
+                                    /* top: 65px; */
+                                    top: 37%;
+                                    text-indent: -9999px;
+                                    z-index: 10;
+                                    cursor: pointer;
+                                    text-indent: -9999px;
+                                    -webkit-transition: all .3s ease;
+                                }
+                            </style>
                 <div class="wr-hol" >
-                    <div class="s-work">
+                    <div class="s-work" id="our-work-slides" >
                         <h2><span>Sample Our</span> Work</h2>
-                        <div style="width:1100px;margin:50px auto;clear:both;">
+                       <input type="hidden" value="item-1" id="current-slide-id" />
+                        <div style="width:1100px;margin:50px auto;clear:both;" id="item-1">
                             <ul>
-                                <li> <img src="img/sample-work-ipad.png"> </li>
+                                <li> <img src="img/responsive-color.png"> </li>
                                 <li style="width:45%;">
-                                    <div class="w-point" style="margin-top:35px;">
-                                        <h4>Mobile and Responsive</h4>
-                                        <p>With over 1 billion mobile web users and growing, mobile 
-                                            and responsive development is more important than 
-                                            ever - let PSD2HTML help you.</p>
-                                    </div>
                                     <div class="w-point">
                                         <h4>Mobile and Responsive</h4>
                                         <p>With over 1 billion mobile web users and growing, mobile 
                                             and responsive development is more important than 
-                                            ever - let PSD2HTML help you.</p>
-                                    </div>
-                                    <div class="w-point">
-                                        <h4>Mobile and Responsive</h4>
+                                            ever - let workhtml.com help you.</p>
                                         <p>With over 1 billion mobile web users and growing, mobile 
                                             and responsive development is more important than 
-                                            ever - let PSD2HTML help you.</p>
+                                            ever - let workhtml.com help you.</p>
+                                        <p>With over 1 billion mobile web users and growing, mobile 
+                                            and responsive development is more important than 
+                                            ever - let workhtml.com help you.</p>
+                                        <p>With over 1 billion mobile web users and growing, mobile 
+                                            and responsive development is more important than 
+                                            ever - let workhtml.com help you.</p>
+                                        <p>With over 1 billion mobile web users and growing, mobile 
+                                            and responsive development is more important than 
+                                            ever - let workhtml.com help you.</p>
                                     </div>
                                 </li>
                             </ul>
                         </div>
+                        <div style="width:1100px;margin:50px auto;clear:both;display:none;" id="item-2">
+                            <ul >
+                                <li> <img src="img/order-platform.png"> </li>
+                                <li style="width:45%;float:left;margin-top: 26px;margin-left: 40px;">
+                                    <div class="w-point" style="margin-top:35px;">
+                                        <h4>Want to become?</h4>
+                                        <p>Our services are awesome. Please give oder to place our next projects
+                                        Hope you being valuable cutomers for us so please click order now button to place your requirements.</p>
+                                    </div>
+                                    <div class="w-point">
+                                        <h4>Our Hope</h4>
+                                        <p>We are perfect we hope our self first. We make cutomer to make hope our services.Let's try our servie you can feel the hope</p>
+                                    </div>
+                                   
+                                </li>
+                            </ul>
+                           
+                        </div>
+                        
                     </div>
+                     <div  class="round-point">&nbsp;</div>
+                        <div class="round-point">&nbsp;</div>
                 </div>
             </section>
 
@@ -937,8 +993,43 @@
                 });
     
             });
-
             //CONTACT US ANIMATION LABLE END
+            //SAMPLE WORK ANIMATION SLIDE START
+            var slidesArray = ["item-1","item-2"]; // create the empty aArray
+            /* $(document).ready(function() {
+                var slidesChildren = $("#our-work-slides"); // find the a children of the list items
+                
+                for (var i=0; i < slidesChildren.length; i++) {    
+                    var aChild = slidesChildren[i];
+                    var ahref = $(aChild).attr('id');
+                    slidesArray.push(ahref);
+                }
+            });*/
+            //SAMPLE WORK ANIMATION SLIDE START
+            setInterval("sliders()",5000);
+            function sliders()
+            {
+                console.log("slider method called >>>>>>");
+                var currentId=document.getElementById("current-slide-id").value;
+                console.log("slider currentId >>>>>>"+currentId);
+                if(slidesArray.indexOf(currentId) !== -1)
+                {
+                    currentIdPosition=slidesArray.indexOf(currentId);
+                    nextPosition=currentIdPosition+1;
+                    if(nextPosition >=slidesArray.length)
+                    {
+                        nextPosition=0;
+                    }
+                    console.log("slider currentIdPosition >>>>>>"+currentIdPosition);
+                    console.log("slider nextPosition >>>>>>"+nextPosition);
+                    $("#"+slidesArray[currentIdPosition]).fadeOut("3000",function(){
+                       $("#"+slidesArray[nextPosition]).fadeIn("3000");
+                    document.getElementById("current-slide-id").value=slidesArray[nextPosition];
+                    });
+                    
+                }
+            }
+            
 
         </script>
     </body>

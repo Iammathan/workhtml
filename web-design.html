@@ -492,55 +492,8 @@
                 <nav class="stick">
                     <ul >
                         <li><a href="index.html" >Home</a></li>
-                        <li id="wh-services"><a href="#" class="nav-active active-menu">Services</a></li>
-                        <style>
-                            
-                            .dropdownDiv ul
-                            {
-                                position: absolute;
-                                padding-top: 64px;
-                                width: 350px;
-                                
-                            }
-                            .dropdownDiv li:first-child{
-                                background: url("./img/icon-up-arrow.png") no-repeat;
-                                border: none;
-                                height: 7px;
-                                left: 20%;
-                                margin-left: 57px;
-                                position: absolute;
-                                top: 58px;
-                                width: 13px;
-                                z-index: 49;
-                            }
-                            .dropdownDiv li {
-                                background: none repeat scroll 0 0 #FFF;
-                                border: 1px solid #DDD;
-                                padding: 0px 0;
-                                position: relative;
-                                z-index: 1;
-                            }
-                            .dropdownDiv li a {
-                                border-top: 1px dotted #ECECEC;
-                                color: #555;
-                                display: block;
-                                font-style: normal;
-                                width: 93%;
-                            }
-                        </style>
-                        <div class="dropdownDiv" style="display: none;" id="service-dropdown">
-                            <ul>
-                                <li></li>
-                                <li> 
-                                    <a href="wordpress-development.html">Wordpress Development</a>
-                                    <a href="psd-to-html-conversion.html">PSD to HTML</a>
-                                    <a href="web-design.html">Web Design</a>
-                                    <a href="#">Web Hosting (coming soon)</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <li><a href="index.html#services" class="nav-active active-menu">Services</a></li>
                         <li><a href="index.html#our-work" >Our work</a></li>
-
                         <li><a href="index.html#contact" >Contact</a></li>
                     </ul>
                 </nav>
@@ -631,9 +584,9 @@ compromise.</p>
                                             <div>
                                                 <span class="ic-ar"><img src="img/html5.png" style="margin-top:17px;"></span>
                                                 <h3>HTML5 & CSS3</h3>
-                                                <p>Will use advanaced HTML Tag's and CSS3 element for
+                                                <p>Will use advanaced HTML Tags and CSS3 element for
 
-your webpage</p>
+your webpage.</p>
                                             </div>
                                         </li>
 
@@ -643,7 +596,7 @@ your webpage</p>
                                             <div>
                                                 <span class="ic-ar"><img src="img/response-design.png" style="margin-top:17px;"></span>
                                                 <h3>Responsive Design</h3>
-                                                <p>Quick, prompt and interactive designs to create an engaged web experience</p>
+                                                <p>Quick, prompt and interactive designs to create an engaged web experience.</p>
                                             </div>
 
                                         </li>
@@ -653,7 +606,7 @@ your webpage</p>
                                             <div>
                                                 <span class="ic-ar"><img src="img/browser-compatability.png" style="margin-top:17px;"></span>
                                                 <h3>Browser Compatability</h3>
-                                                <p>View website in any browswer without any trouble</p>
+                                                <p>View website in any browser without any trouble.</p>
                                             </div>
 
                                         </li>
@@ -670,7 +623,7 @@ your webpage</p>
                                             <div>
                                                 <span class="ic-ar"><img src="img/html5.png" style="margin-top:17px;"></span>
                                                 <h3>Unique & Modern</h3>
-                                                <p>We think out of box, so we stand out with our very own unique and modern designs</p>
+                                                <p>We think out of box, so we stand out with our very own unique and modern designs.</p>
                                             </div>
                                         </li>
 
@@ -1206,16 +1159,16 @@ built magic elements helps to reduce the load time and provides a faster experie
                                 <h6>services</h6>
                             </li>
                             <li>
-                                <a href="">Wordpress Developement</a>
+                                <a href="wordpress-development.html">Wordpress Developement</a>
                             </li>
                             <li>
-                                <a href="">PSD to HTML Conversion</a>
+                                <a href="psd-to-html-conversion.html">PSD to HTML Conversion</a>
                             </li>
                             <li>
-                                <a href="">Website Design</a>
+                                <a href="#">Website Design</a>
                             </li>
                             <li>
-                                <a href="">Web hosting</a>
+                                <a href="#">Web hosting</a>
                             </li>
                         </ul>
                     </li>
@@ -1231,10 +1184,10 @@ built magic elements helps to reduce the load time and provides a faster experie
                                 <a href="">About Us</a>
                             </li>
                             <li>
-                                <a href="">Contact Us</a>
+                                <a href="index.html#contact">Contact Us</a>
                             </li>
                             <li>
-                                <a href="">Sample work</a>
+                                <a href="index.html#our-work">Sample work</a>
                             </li>
                         </ul>
                     </li>
@@ -1305,18 +1258,6 @@ built magic elements helps to reduce the load time and provides a faster experie
                                circles("process",{"milliSecond":"4000","circleClassName":"circle","circleSubClassName":"m-ar","totalCircleCount":"3","callback":ourProcessCallback});
                             }
                         } 
-                    }
-                });
-                //WORKHTML[DOT]COM SERVICE SUBMENU
-                $( "#wh-services" ).click(function() {
-                    if(document.getElementById("service-dropdown").style.display === "none")
-                    {
-                        console.log("display : block part")
-                        document.getElementById("service-dropdown").style.display="block";
-                    }
-                    else
-                    {
-                        document.getElementById("service-dropdown").style.display="none";
                     }
                 });
         });
